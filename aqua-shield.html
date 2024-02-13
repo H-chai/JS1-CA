@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The home page of Rainy Days">
+  <title>Aqua Shield</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div id="loading">
+    <div class="lds-dual-ring"></div>
+  </div>
+  
+  <header>
+    <a href="index.html"><img src="image/RainyDays_Logo.png" alt="logo of rainy days" class="rainydays-logo" title="Jump to Home"></a>
+    <div class="header-menu-wrapper">
+      <nav>
+        <ul class="nav-menu">
+          <li class="nav-menu-list header-nav-menu-list"><a href="index.html">Home</a></li>
+          <li class="nav-menu-list header-nav-menu-list"><a href="product.html">Shop</a></li>
+          <li class="nav-menu-list header-nav-menu-list"><a href="about.html">About</a></li>
+          <li class="nav-menu-list header-nav-menu-list"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <ul class="nav-menu">
+        <li class="icon-menu-list">
+          <a href="#" class="icon-link" aria-label="Search"><iconify-icon icon="iconamoon:search-bold" style="color: #1a1c1e;" width="16" height="16"></iconify-icon></a>
+        </li>
+        <li class="icon-menu-list">
+          <a href="#" class="icon-link" aria-label="Log in my page"><iconify-icon icon="charm:person" style="color: #1a1c1e;" width="16" height="16"></iconify-icon></a>
+        </li>
+        <li class="icon-menu-list">
+          <a href="#" class="icon-link" aria-label="Wish list"><iconify-icon icon="ph:heart-bold" style="color: #1a1c1e;" width="16" height="16"></iconify-icon></a>
+        </li>
+        <li class="icon-menu-list">
+          <a href="checkout.html" class="icon-link" aria-label="Shopping cart"><iconify-icon icon="heroicons-outline:shopping-bag" style="color: #1a1c1e;" width="16" height="16"></iconify-icon></a>
+        </li>
+      </ul>
+    </div>
+    <!-- hamburger menu -->
+    <div class="responsive-menu">
+      <a href="#"><iconify-icon icon="iconamoon:search-light" style="color: #191c1e;" width="28" height="28"></iconify-icon></a>
+      <a href="checkout.html"><iconify-icon icon="heroicons:shopping-bag" style="color: #191c1e;" width="28" height="28"></iconify-icon></a>
+      <div class="hamburger-menu-icon">
+        <input type="checkbox" id="hamburger-menu">
+        <label for="hamburger-menu" class="open-menu"><iconify-icon icon="radix-icons:hamburger-menu" style="color: #191c1e;" width="28" height="28"></iconify-icon></label>
+        <label for="hamburger-menu" class="close-menu"><iconify-icon icon="radix-icons:cross-1" style="color: #191c1e;" width="28" height="28"></iconify-icon></label>
+        <div class="hamburger-menu-container">
+          <nav>
+            <ul class="nav-menu">
+              <li class="nav-menu-list header-nav-menu-list"><a href="index.html">Home</a></li>
+              <li class="nav-menu-list header-nav-menu-list"><a href="product.html">Shop</a></li>
+              <li class="nav-menu-list header-nav-menu-list"><a href="about.html">About</a></li>
+              <li class="nav-menu-list header-nav-menu-list"><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <ul class="login-wishlist">
+            <li>
+              <a href="#">
+                <iconify-icon icon="charm:person" style="color: #1a1c1e;" width="28" height="28"></iconify-icon>
+                <p>My Account</p>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <iconify-icon icon="ph:heart-bold" style="color: #1a1c1e;" width="28" height="28"></iconify-icon>
+                <p>My Wishlist</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  </header>
+
+  <main>
+    <section class="item-container">
+      <div class="item-image">
+        <img src="image/Aqua-Shield.png" alt="Aqua Shield">
+      </div>
+      <div class="item-text">
+        <h2 class="item-name">Aqua Shield</h2>
+        <p class="item-price">$110.00</p>
+        <div class="size-selector">
+          <p>Size</p>
+          <ul>
+            <li tabindex="0">XS</li>
+            <li tabindex="0">S</li>
+            <li tabindex="0">M</li>
+            <li tabindex="0">L</li>
+            <li tabindex="0">XL</li>
+            <li tabindex="0">XXL</li>
+          </ul>
+        </div>
+        <p class="item-description description-desktop">Lorem ipsum dolor sit amet consectetur. Sed pharetra laoreet ac amet sit donec neque nulla. Pellentesque suspendisse mattis non nisi habitasse. Eget enim neque nunc fringilla. Amet eu vitae urna nibh pharetra ut interdum amet nibh. Cursus neque sagittis cursus diam nunc vulputate arcu bibendum morbi. Feugiat vestibulum pharetra ullamcorper quis nulla venenatis donec non. Malesuada est facilisis tellus eleifend adipiscing laoreet elit amet.</p>
+        <div class="cta-wishlist">
+          <a href="checkout.html" class="cta-link-checkout">
+            <button class="cta checkout-cta">Add to bag</button>
+          </a>
+          <div class="icon-border">
+            <iconify-icon icon="ph:heart-bold" style="color: #00658c;" width="24" height="24" class="icon-desktop" aria-label="Add to wishlist" tabindex="0"></iconify-icon>
+            <iconify-icon icon="ph:heart-bold" style="color: #00658c;" width="20" height="20" class="icon-mobile" aria-label="Add to wishlist" tabindex="0"></iconify-icon>
+          </div>
+        </div>
+        <div class="condition">
+          <iconify-icon icon="gg:check-o" style="color: #191c1e;" width="24" height="24" class="icon-desktop"></iconify-icon>
+          <iconify-icon icon="gg:check-o" style="color: #191c1e;" width="16" height="16" class="icon-mobile"></iconify-icon>
+          <a href="#">Guarantee & Free Returns</a>
+        </div>
+        <div class="condition">
+          <iconify-icon icon="la:shipping-fast" style="color: #191c1e;" width="24" height="24" class="icon-desktop"></iconify-icon>
+          <iconify-icon icon="la:shipping-fast" style="color: #191c1e;" width="16" height="16" class="icon-mobile"></iconify-icon>
+          <a href="#">Shipping & Returns</a>
+        </div>
+        <p class="item-description description-mobile">Lorem ipsum dolor sit amet consectetur. Sed pharetra laoreet ac amet sit donec neque nulla. Pellentesque suspendisse mattis non nisi habitasse. Eget enim neque nunc fringilla. Amet eu vitae urna nibh pharetra ut interdum amet nibh. Cursus neque sagittis cursus diam nunc vulputate arcu bibendum morbi. Feugiat vestibulum pharetra ullamcorper quis nulla venenatis donec non. Malesuada est facilisis tellus eleifend adipiscing laoreet elit amet.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <a href="index.html" class="footer-logo-desktop"><img src="image/footer-logo.png" alt="logo of rainy days" class="rainydays-logo" title="Jump to Home"></a>
+      <div class="footer-links">
+        <nav>
+          <ul class="footer-nav-menu">
+            <li class="nav-menu-list footer-nav-menu-list"><a href="index.html">Home</a></li>
+            <li class="nav-menu-list footer-nav-menu-list"><a href="product.html">Shop</a></li>
+            <li class="nav-menu-list footer-nav-menu-list"><a href="about.html">About</a></li>
+            <li class="nav-menu-list footer-nav-menu-list"><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="sns-wrapper">
+          <p>Follow us</p>
+          <ul class="sns-list">
+            <li>
+              <a href="#" class="icon-link" aria-label="Instagram"><iconify-icon icon="mdi:instagram" style="color: white;" width="16" height="16"></iconify-icon></a>
+            </li>
+            <li>
+              <a href="#" class="icon-link" aria-label="Youtube"><iconify-icon icon="mdi:youtube" style="color: white;" width="16" height="16"></iconify-icon></a>
+            </li>
+            <li>
+              <a href="#" class="icon-link" aria-label="Tik Tok"><iconify-icon icon="ic:baseline-tiktok" style="color: white;" width="16" height="16"></iconify-icon></a>
+            </li>
+            <li>
+             <a href="#" class="icon-link" aria-label="Twitter"><iconify-icon icon="mdi:twitter" style="color: white;" width="16" height="16"></iconify-icon></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="newsletter-signup">
+        <h4>Newsletter Signup</h4>
+        <p>Sign up for our newsletter to receive exclusive updates, special offers, and the latest trends.</p>
+        <input type="text" placeholder="E-mail" class="email">
+        <button class="signup-button">Sign Up</button>
+      </div>
+    </div>
+    <a href="index.html" class="footer-logo-mobile"><img src="image/footer-logo.png" alt="logo of rainy days" class="rainydays-logo-footer"></a>
+  </footer>
+
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script>
+    window.onload = function () {
+      const spinner = document.getElementById('loading');
+      spinner.classList.add('loaded');
+    }
+  </script>
+</body>
