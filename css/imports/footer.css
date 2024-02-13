@@ -1,0 +1,221 @@
+footer {
+  background-color: var(--footer-bg);
+  color: #fff;
+  padding: 9.6rem 12rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+}
+
+.footer-links {
+  display: flex;
+  gap: 10%;
+}
+
+.footer-nav-menu {
+  list-style: none;
+}
+
+.footer-nav-menu-list {
+  padding-bottom: 3.2rem;
+
+  & a {
+    color: #fff;
+  }
+}
+
+.sns-wrapper {
+  & p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 1.6rem;
+  }
+
+  .sns-list {
+    list-style: none;
+    display: flex;
+    gap: 1.6rem;
+
+    & a {
+      color: #fff;
+    }
+  }
+}
+
+.newsletter-signup {
+
+  & h4 {
+    font-family: var(--font-archivo);
+    font-size: 2.1rem;
+    line-height: 1.14;
+    margin-bottom: 1.6rem;
+  }
+
+  & p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 2.4rem;
+  }
+}
+
+.email {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #fff;
+  background-color: var(--footer-bg);
+  line-height: 2.4rem;
+  margin-bottom: 4rem;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding-bottom: 0.5rem;
+} 
+
+.email::placeholder {
+  color: #fff;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+input:focus::placeholder {
+  color: transparent;
+}
+
+.signup-button {
+  font-family: inherit;
+  width: 22.4rem;
+  background-color: #fff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 1.2rem;
+  color: var(--footer-bg);
+  border-radius: 24px;
+  border: solid 2px transparent;
+  text-align: center;
+  transition: all .3s ease;
+}
+
+.signup-button:hover {
+  border: solid 2px #fff;
+  background-color: var(--footer-bg);
+  color: #fff;
+}
+
+.footer-logo-mobile {
+  display: none;
+}
+
+@media screen and (max-width:1023px) {
+
+  footer {
+    padding: 8rem 6rem 4rem 6rem;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 2fr;
+    gap: 15%;
+  }
+
+  .footer-nav-menu-list {
+    padding-bottom: 2rem;
+  }
+  
+  .footer-logo-desktop {
+    display: none;
+  }
+
+  .footer-logo-mobile {
+    display: block;
+    text-align: center;
+    margin-top: 8rem;
+  }
+
+  .rainydays-logo-footer {
+    width: 12rem;
+  }
+
+  .footer-links {
+    gap: 0;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width:767px) {
+  
+  footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+
+  .footer-nav-menu-list {
+    padding: 1rem 0;
+    font-size: 1.4rem;
+    font-weight: 300;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+  }
+
+  .sns-wrapper {
+    text-align: center;
+
+    & p {
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin-top: 2rem;
+    }
+  
+    .sns-list {
+      justify-content: center;
+    }
+  }
+
+  .newsletter-signup {
+
+    & h4 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+  
+    & p {
+      font-size: 1.4rem;
+      font-weight: 300;
+      margin-bottom: 1.6rem;
+    }
+  }
+  
+  .email {
+    border: 1px solid #fff;
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding: 1rem;
+    margin-bottom: 3rem;
+  } 
+
+  .signup-button {
+    width: 100%;
+    background-color: #fff;
+    font-size: 1.4rem;
+    padding: 1rem;
+  }
+
+}

@@ -1,5 +1,5 @@
 /* Contact page */
-.contact-page {
+.bg-color {
   background-color: #DDE3EA;
 }
 
@@ -7,8 +7,9 @@
   padding: 12rem 12rem 23.2rem 12rem;
 
   & h1 {
+    font-family: var(--font-archivo);
     font-size: 5rem;
-    color: #191C1E;
+    color: var(--font-bg-black);
     line-height: 1.28;
     text-align: center;
     margin-bottom: 6.4rem;
@@ -20,29 +21,29 @@
   justify-content: center;
 }
 
-.contact-content {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-  margin-bottom: 7.2rem;
-}
-
 .contact-information {
   width: 42%;
   background-color: var(--font-bg-blue);
   padding: 9.6rem 5.6rem 18.2rem 5.6rem;
-  background-image: url("../image/contact-logo.png");
+  background-image: url("../../image/contact-logo.png");
   background-size: 60%;
-  background-position: right 10% bottom -5%;
+  background-position: right 10% bottom 0;
   border-radius: 5px;
 
   & h2 {
-    font-family: 'Archivo Black', sans-serif;
+    font-family: var(--font-archivo);
     font-size: 2.8rem;
     line-height: 1.4;
     margin-bottom: 5.6rem;
     color: #fff;
   }
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-bottom: 7.2rem;
 }
 
 .company-information {
@@ -60,6 +61,10 @@
   }
 }
 
+.icon-mobile {
+  display: none;
+}
+
 .sns-wrapper {
   .contact-sns-list {
     gap: 2.4rem;
@@ -67,15 +72,20 @@
 }
 
 .contact-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 58%;
   background-color: #fff;
-  padding: 8rem 9.6rem;
+  padding: 8rem 0;
   border-radius: 0 5px 5px 0;
 
   & form {
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
+    width: 76%;
+    margin: 0 auto;
   }
 
   & input {
@@ -91,7 +101,135 @@
   }
 }
 
-.custmer-input::placeholder {
+.customer-input::placeholder {
   color: #71787E;
   font-weight: 500;
+}
+
+.cta-link-contact {
+  display: block;
+  margin-top: 5.6rem;
+}
+
+.contact-cta {
+  width: 44%;
+}
+
+@media screen and (max-width:1023px) {
+
+  .contact-main {
+    padding: 12rem 6rem 12rem 6rem;
+  
+    & h1 {
+      font-size: 2.8rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  .contact-information {
+    padding: 6rem 4rem 12rem 4rem;
+    background-size: 50%;
+    background-position: right 10% bottom 0;
+    border-radius: 5px;
+  
+    & h2 {
+      font-size: 2.6rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  .icon-desktop {
+    display: none;
+  }
+
+  .icon-mobile {
+    display: block;
+  }
+
+  .contact-content {
+    gap: 2.5rem;
+    margin-bottom: 5rem;
+  }
+
+  .company-information {
+  
+    & iconify-icon {
+      margin-right: 2rem;
+    }
+  
+    & p {
+      font-size: 1.6rem;
+    }
+  }
+
+  .contact-input {
+    padding: 6rem 0;
+  
+    & form {
+      gap: 2rem;
+      width: 82%;
+    }
+  }
+
+  .cta-link-contact {
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (max-width:767px) {
+
+  .bg-color {
+    background-color: #fff;
+  }
+
+  .contact-main {
+    padding: 10rem 1rem 12rem 1rem;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-information {
+    width: 100%;
+    padding: 5rem 7rem;
+    text-align: center;
+    background-size: 0;
+  
+    & h2 {
+      font-size: 1.8rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  .contact-content {
+    align-items: center;
+  }
+
+  .company-information {
+    flex-direction: column;
+  
+    & iconify-icon {
+      margin-right: 0;
+      margin-bottom: .8rem;
+    }
+  
+    & p {
+      font-size: 1.6rem;
+    }
+  }
+
+  .contact-input {
+    width: 100%;
+    padding: 4rem 0 0 0;
+  
+    & form {
+      gap: 1.6rem;
+      width: 100%;
+    }
+  }
+
+  .contact-cta {
+    width: 100%;
+  }
 }

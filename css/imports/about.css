@@ -4,13 +4,13 @@
 }
 
 .about-us-container {
-  padding-left: 12rem;
+  padding: 0 12rem;
   margin-bottom: 23.2rem;
 }
 
 .about-section {
   display: flex;
-  gap: 10.2rem;
+  align-items: center;
 }
 
 .purpose {
@@ -22,8 +22,8 @@
 }
 
 .text-wrapper {
+  width: 40%;
   color: var(--font-bg-black);
-  margin-top: 5.6rem;
 
   & h2 {
     font-family: var(--font-archivo);
@@ -34,37 +34,135 @@
   }
 
   & p {
-    width: 50.8rem;
     font-size: 1.6rem;
     line-height: 1.5;
   }
 }
 
-.purpose-image-wrapper {
-  width: 100%;
+.text-wrapper-right {
+  margin-right: 8rem;
 }
 
-.purpose-img {
-  width: 100%;
+.image-wrapper {
+  width: 60%;
+
+  & img {
+    width: 100%;
+  }
 }
 
 .history-image-wrapper {
   position: relative;
+  width: 40%;
+  margin: 0 8rem;
 }
 
 .history-image-wrapper::before {
   content: '';
-  width: 40.5rem;
+  width: 100%;
   height: 100%;
   background-color: #D2E5F4;
   position: absolute;
   top: 4.8rem;
-  left: 0;
+  left: -8rem;
 }
 
 .history-img {
-  width: 40.5rem;
-  margin-left: 10.2rem;
   position: relative;
   z-index: 999;
+}
+
+.mobile-img {
+  display: none;
+}
+
+@media screen and (max-width:1023px) {
+
+  .about-main-visual {
+    margin-bottom: 10rem;
+    height: 100vh;
+  }
+
+  .about-us-container {
+    padding: 0 6rem;
+    margin-bottom: 10rem;
+  }
+
+  .text-wrapper {
+    width: 50%;
+  }
+
+  .text-wrapper-right {
+    margin-right: 6rem;
+  }
+  
+  .image-wrapper {
+    width: 50%;
+  }
+
+  .history-image-wrapper {
+    width: 40%;
+    margin: 0 6rem;
+  }
+  
+  .history-image-wrapper::before {
+    top: 4.2rem;
+    left: -6rem;
+  }
+
+}
+
+@media screen and (max-width:767px) {
+
+  .about-main-visual {
+    background-image: url("../../image/about-main-visual-mobile.jpg");
+    margin-bottom: 6rem;
+  }
+
+  .about-us-container {
+    padding: 0 2rem;
+    margin-bottom: 8rem;
+  }
+
+  .about-section {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .purpose, .history {
+    margin-bottom: 4rem;
+  }
+
+  .text-wrapper {
+    width: 100%;
+
+    & h2 {
+      font-size: 2.4rem;
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  .text-wrapper-right {
+    margin-right: 0rem;
+  }
+
+  .image-wrapper {
+    width: 100%;
+  }
+
+  .history-image-wrapper {
+    display: none;
+  }
+
+  .sustainability {
+    flex-direction: column-reverse;
+  }
+
+  .desktop-img {
+    display: none;
+  }
+
+  .mobile-img {
+    display: block;
+  }
 }

@@ -1,0 +1,225 @@
+a {
+  text-decoration: none;
+}
+
+header {
+  padding: 3.2rem 12rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+.header-menu-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6.4rem;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 3.2rem;
+}
+
+.rainydays-logo {
+  width: 10.4rem;
+  height: fit-content;
+}
+
+.nav-menu-list {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.header-nav-menu-list {
+  position: relative;
+  & a {
+    color: var(--font-bg-black);
+  }
+}
+
+.header-nav-menu-list::after {
+  position: absolute;
+  bottom: -3px;
+  left:50%;
+  transform: translateX(-50%) scale(0, 1);
+  transform-origin: center top;
+  transition: transform .3s;
+  content: '';
+  width: 20px;
+  height: 2px;
+  background-color: #191C1E;
+}
+
+.header-nav-menu-list:hover::after {
+  transform: translateX(-50%) scale(1, 1);
+}
+
+.on-page {
+  position: relative;
+}
+  
+.on-page::after {
+  position: absolute;
+  bottom: -3px;
+  left:50%;
+  transform: translateX(-50%);
+  content: '';
+  width: 20px;
+  height: 2px;
+  background-color: #191C1E;
+}
+
+iconify-icon {
+  transition: .3s;
+}
+
+.icon-link:hover iconify-icon {
+  transform: scale(1.2);
+}
+
+.responsive-menu {
+  display: none;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+.hamburger-menu-container {
+  display: none;
+}
+
+#hamburger-menu:checked ~ .hamburger-menu-container {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  padding: 14rem 6rem;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+#hamburger-menu:checked ~ .open-menu {
+  display: none;
+}
+
+.close-menu {
+  display: none;
+}
+
+#hamburger-menu:checked ~ .close-menu {
+  display: block;
+}
+
+.login-wishlist {
+  list-style: none;
+  margin-top: 4.8rem;
+  padding-top: 3.6rem;
+  border-top: solid 1px rgba(25, 28, 30, .5);
+
+  & li {
+    margin-bottom: 1.6rem;
+  }
+
+  & a {
+    text-decoration: none;
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+    color: var(--font-bg-black);
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width:1023px) {
+  
+  header {
+    padding: 1.5rem 6rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+
+  .header-menu-wrapper {
+    display: none;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .rainydays-logo {
+    width: 8rem;
+    position: relative;
+    z-index: 999;
+  }
+
+  .header-nav-menu-list {
+    font-size: 3.2rem;
+  }
+
+  .header-nav-menu-list::after {
+    display: none;
+  }
+
+  .responsive-menu {
+    display: block;
+    display: flex;
+    gap: 3rem;
+
+    & a, label {
+      position: relative;
+      z-index: 999;
+    }
+  }
+
+
+}
+
+@media screen and (max-width:767px) {
+
+  header {
+    padding: 1rem;
+  }
+
+  #hamburger-menu:checked ~ .hamburger-menu-container {
+    padding: 10rem 3rem;
+  }
+
+  .nav-menu {
+    gap: 3rem;
+  }
+
+  .header-nav-menu-list {
+    font-size: 2.4rem;
+  }
+  .login-wishlist {
+    margin-top: 3rem;
+    padding-top: 3rem;
+  
+    & li {
+      margin-bottom: 1.6rem;
+    }
+  
+    & a {
+      text-decoration: none;
+      display: flex;
+      gap: 1.6rem;
+      align-items: center;
+      color: var(--font-bg-black);
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+  }
+  
+}
