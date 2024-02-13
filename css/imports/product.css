@@ -1,0 +1,30 @@
+.product-main-visual {
+  background-image: url("../../image/product-main-visual.jpg");
+  padding-top: 31.2rem;
+  padding-left: 22.2rem;
+  margin-bottom: 19.8rem;
+
+  & h1 {
+    font-family: var(--font-archivo);
+    font-size: 5rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    position: relative;
+    }
+
+}
+
+.product-main-visual::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.product-product {
+  padding: 0 12rem;
+  margin-bottom: 23.2rem;
+}
