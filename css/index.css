@@ -163,7 +163,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 101, 140, 0.05);
+  border: solid 1px var(--footer-bg);
   position: relative;
   height: 40rem;
 
