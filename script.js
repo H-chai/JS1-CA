@@ -25,9 +25,8 @@ async function displayProducts() {
       const productImage = document.createElement("img");
       productImage.classList.add("product-image");
       productImage.src = product.image;
-      const addToFavorite = document.createElement("i");
-      addToFavorite.classList.add('iconify', 'wish-icon');
-      addToFavorite.setAttribute("data-icon", "ph:heart-bold");
+      const addToFavorite = document.createElement("button");
+      addToFavorite.classList.add("fa-regular", "fa-heart", "fa-2xl", "wish-icon");
 
       productImageWrapper.appendChild(productImage);
       productImageWrapper.appendChild(addToFavorite);
@@ -43,9 +42,8 @@ async function displayProducts() {
       const productPrice = document.createElement("p");
       productPrice.classList.add("product-price");
       productPrice.textContent = `$${product.price}`;
-      const addToCartIcon = document.createElement("i");
-      addToCartIcon.classList.add('iconify', 'add-to-cart-icon');
-      addToCartIcon.setAttribute("data-icon", "mi:shopping-cart-add");
+      const addToCartIcon = document.createElement("button");
+      addToCartIcon.classList.add("fa-solid", "fa-cart-plus", "fa-xl", "add-to-cart-icon");
 
       priceWrapper.appendChild(productPrice);
       priceWrapper.appendChild(addToCartIcon);
