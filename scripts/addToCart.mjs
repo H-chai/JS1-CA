@@ -1,5 +1,5 @@
 // Find the cart icon/buttons and give them the add function
-function findCartIcon() {
+async function findCartIcon() {
   const cartIcons = document.querySelectorAll(".add-to-cart-icon");
   cartIcons.forEach(cartIcon => {
     cartIcon.addEventListener("click", addToCart);
