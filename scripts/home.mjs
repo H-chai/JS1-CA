@@ -1,3 +1,4 @@
+import { addToCart } from "./addToCart.mjs";
 import { API_RAINY_DAYS } from "./constants.mjs";
 import { doFetch } from "./doFetch.mjs";
 
@@ -51,12 +52,23 @@ async function displayProducts(products) {
   })
 }
 
+// Find the cart icon/buttons and give them the add function
+async function findCartIcon() {
+  const cartIcons = document.querySelectorAll(".add-to-cart-icon");
+  cartIcons.forEach(cartIcon => {
+    cartIcon.addEventListener("click", addToCart);
+  });
+  console.log("Event listeners set up");
+  console.log(cartIcons);
+}
+
 
 // This function is called whenever the page is loaded
 async function main() {
   try {
     const products = await doFetch(API_RAINY_DAYS);
     displayProducts(products);
+    findCartIcon();
     console.log(products);
   } catch (error) {
     console.log(error);

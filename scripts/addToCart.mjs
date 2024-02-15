@@ -1,16 +1,7 @@
-// Find the cart icon/buttons and give them the add function
-async function findCartIcon() {
-  const cartIcons = document.querySelectorAll(".add-to-cart-icon");
-  cartIcons.forEach(cartIcon => {
-    cartIcon.addEventListener("click", addToCart);
-  });
-  console.log("Event listeners set up");
-  console.log(cartIcons);
-}
-
 // Add to cart function
-function addToCart(event) {
+export function addToCart(event) {
   const clickedCart = event.target;
+  console.log(clickedCart);
   
   const productWrapper = clickedCart.closest(".product-wrapper");
 
@@ -26,18 +17,6 @@ function addToCart(event) {
     console.error("Product container not found");
   }
 
-  //const productImage = productWrapper.querySelector(".product-image").src;
-  //const productTitle = productWrapper.querySelector(".product-name").textContent;
-  //const productPrice = productWrapper.querySelector(".product-price").textContent;
-
-  // const productData = {
-  //   image: productImage,
-  //   title: productTitle,
-  //   price: productPrice,
-  // };
-
 }
-
-findCartIcon();
 
 
