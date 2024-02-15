@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&display=swap" rel="stylesheet">
   <script type="module" src="./scripts/deleteItem.mjs"></script>
+
 </head>
 <body>
   <div id="loading">
@@ -158,41 +159,48 @@
       <div class="cart-summary-cta">
         <div class="cart-summary">
           <h2>Cart summary</h2>
-          <div class="cart-product">
-            <div class="cart-detail">
-              <img src="image/Aquq-Shield.png" alt="">
-              <div class="quantity">
-                <p>Aqua Shield</p>
-                <p class="cart-item-price">$110.00</p>
-                <input type="number" value="1" class="cart-quantity">
-                <!-- <p>Size: <span>S</span></p> -->
+          
+          <div id="summary-container">
+
+            <div class="cart-product">
+              <div class="cart-detail">
+                <img src="image/Aquq-Shield.png" alt="" class="cart-product-image">
+                <div class="quantity">
+                  <p>Aqua Shield</p>
+                  <p class="cart-product-price">$110.00</p>
+                  <input type="number" value="1" class="cart-quantity">
+                  <!-- <p>Size: <span>S</span></p> -->
+                </div>
               </div>
-            </div>
               <button class="remove-button">
                 <i class="fa-solid fa-trash-can fa-2xl"></i>
               </button>
-          </div>
-          <div class="cart-product">
-            <div class="cart-detail">
-              <img src="image/Aquq-Shield.png" alt="">
-              <div class="quantity">
-                <p>Aqua Shield</p>
-                <p class="cart-item-price">$110.00</p>
-                <input type="number" value="1" class="cart-quantity">
-                <!-- <p>Size: <span>S</span></p> -->
-              </div>
             </div>
+
+            <!-- <div class="cart-product">
+              <div class="cart-detail">
+                <img src="" alt="">
+                <div class="quantity">
+                  <p class="product-title"></p>
+                  <p class="cart-product-price"></p>
+                  <input type="number" value="1" class="cart-quantity">
+                </div>
+              </div>
               <button class="remove-button">
                 <i class="fa-solid fa-trash-can fa-2xl"></i>
               </button>
+            </div> -->
+
           </div>
+          
+          
           <div class="subtotal">
             <p>Subtotal</p>
-            <p>$110.00</p>
+            <p >$</p>
           </div>
           <div class="total">
             <p>Total</p>
-            <p>$110.00</p>
+            <p class="total-cost">$</p>
           </div>
         </div>
         <a href="checkout-success.html" class="cta-link-purchase">

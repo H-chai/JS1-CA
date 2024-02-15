@@ -8,9 +8,7 @@ function findRemoveButton() {
 
 function removeItem(event) {
   const clickedButton = event.currentTarget;
-  console.log(clickedButton);
   clickedButton.parentElement.remove();
-  console.log(clickedButton.parentElement);
 }
 
 findRemoveButton();

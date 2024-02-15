@@ -42,10 +42,9 @@ function generateProductsHTML(product) {
 }
 
 async function displayProducts(products) {
-  // Get the products ✅
+  // Get the products
   // For each of the products, generate HTML for the product
   const productContainer = document.querySelector(".featured-product");
-  console.log(productContainer);
   products.forEach(product => {
     const productHTML = generateProductsHTML(product);
     productContainer.appendChild(productHTML);

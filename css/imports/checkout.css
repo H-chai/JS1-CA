@@ -166,7 +166,7 @@
   border-top: 1px solid rgba(113, 120, 126, .3);
   border-bottom: 1px solid rgba(113, 120, 126, .3);
 
-  & img {
+  .cart-product-image {
     width: 25%;
   }
 
@@ -179,7 +179,7 @@
     font-weight: 500;
   }
 
-  .cart-item-price {
+  .cart-product-price {
     font-weight: 500;
     margin: 1rem 0;
   }

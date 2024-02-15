@@ -3,7 +3,12 @@ a {
 }
 
 header {
-  padding: 3.2rem 12rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  padding: 2rem 12rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
