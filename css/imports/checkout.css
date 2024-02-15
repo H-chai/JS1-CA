@@ -181,6 +181,7 @@
 
   .cart-item-price {
     font-weight: 500;
+    margin: 1rem 0;
   }
 }
 
@@ -189,9 +190,16 @@
   margin-right: 2.4rem;
 }
 
+.cart-quantity {
+  border: 1px solid var(--font-bg-black);
+  width: 4rem;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
 .cart-detail {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .subtotal {
