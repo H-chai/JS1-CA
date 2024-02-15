@@ -1,2 +1,2 @@
-# Rainy-days
-HTML and CSS - CA @Noroff
+# JS1 Course Assigntment
+JS1 Course Assigntment @Noroff
