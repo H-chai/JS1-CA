@@ -58,10 +58,8 @@ async function findCartIcon() {
   cartIcons.forEach(cartIcon => {
     cartIcon.addEventListener("click", addToCart);
   });
-  console.log("Event listeners set up");
   console.log(cartIcons);
 }
-
 
 // This function is called whenever the page is loaded
 async function main() {
@@ -76,3 +74,4 @@ async function main() {
 }
 
 main();
+//localStorage.removeItem("cart");

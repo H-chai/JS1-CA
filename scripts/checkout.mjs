@@ -1,6 +1,9 @@
 import { API_RAINY_DAYS } from "./constants.mjs";
 import { doFetch } from "./doFetch.mjs";
 
+// Cart array to store added products
+let cart = [];
+
 // Generate HTML in cart summary
 function generateCartSummaryHTML(product) {
   const cartWrapper = document.createElement("div");
@@ -11,7 +14,7 @@ function generateCartSummaryHTML(product) {
 
   const productImage = document.createElement("img");
   productImage.classList.add("cart-product-image");
-  productImage.src = product.img;
+  productImage.src = product.image;
 
   const quantityWrapper = document.createElement("div");
   quantityWrapper.classList.add("quantity");
@@ -38,9 +41,10 @@ function generateCartSummaryHTML(product) {
 }
 
 // Display products in cart summary
-function displayProductsInCart(products) {
+function displayProductsInCart() {
   const summaryContainer = document.getElementById("summary-container");
-  products.forEach(product => {
+  summaryContainer.innerHTML = "";
+  cart.forEach(product => {
     const productHTML = generateCartSummaryHTML(product);
     summaryContainer.appendChild(productHTML);
   });
