@@ -1,9 +1,6 @@
 import { API_RAINY_DAYS } from "./constants.mjs";
 import { doFetch } from "./doFetch.mjs";
 
-// Cart array to store added products
-let cart = [];
-
 // Generate HTML in cart summary
 function generateCartSummaryHTML(product) {
   const cartWrapper = document.createElement("div");
@@ -24,7 +21,7 @@ function generateCartSummaryHTML(product) {
   productTitle.textContent = product.title;
   const productPrice = document.createElement("p");
   productPrice.classList.add("cart-product-price");
-  productPrice.textContent = `$${product.price}`;
+  productPrice.textContent = product.price;
   const quantityInput = document.createElement("input");
   quantityInput.classList.add("cart-quantity");
   quantityInput.value = "1";
@@ -40,20 +37,32 @@ function generateCartSummaryHTML(product) {
   return cartWrapper;
 }
 
+let cart = [];
+// Get added items from localStorage
+function getItemFromLocalStorage() {
+  // localStorageからcartのdata取得(from JSON to JS)
+  const currentCart = JSON.parse(localStorage.getItem("cart"));
+  // we have to put this data to let cart = []
+  cart.push(...currentCart);
+}
+
 // Display products in cart summary
 function displayProductsInCart() {
   const summaryContainer = document.getElementById("summary-container");
   summaryContainer.innerHTML = "";
-  cart.forEach(product => {
-    const productHTML = generateCartSummaryHTML(product);
+
+  for(let i = 0; i < cart.length; i++) {
+    const productHTML = generateCartSummaryHTML(cart[i]);
     summaryContainer.appendChild(productHTML);
-  });
+  };
+
 }
 
 // This function is called whenever the page is loaded
 async function displayCartSummary() {
   try {
     const products = await doFetch(API_RAINY_DAYS);
+    getItemFromLocalStorage();
     displayProductsInCart(products);
   } catch (error) {
     console.log(error);
@@ -61,3 +70,4 @@ async function displayCartSummary() {
 }
 
 displayCartSummary();
+//localStorage.removeItem("cart");
