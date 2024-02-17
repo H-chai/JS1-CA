@@ -9,9 +9,11 @@ export function addToCart(event) {
       image: productWrapper.querySelector(".product-image").src,
       title: productWrapper.querySelector(".product-name").textContent,
       price: productWrapper.querySelector(".product-price").textContent,
+      id: productWrapper.id,
     }
     
     updateCartSummary(productData);
+    console.log("added cart!");
   }
 }
 

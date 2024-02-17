@@ -6,6 +6,7 @@ import { doFetch } from "./doFetch.mjs";
 function generateCartSummaryHTML(product) {
   const cartWrapper = document.createElement("div");
   cartWrapper.classList.add("cart-product");
+  cartWrapper.id = product.id;
 
   const cartDetail = document.createElement("div");
   cartDetail.classList.add("cart-detail");
@@ -38,14 +39,7 @@ function generateCartSummaryHTML(product) {
   return cartWrapper;
 }
 
-let cart = [];
-// Get added items from localStorage
-function getItemFromLocalStorage() {
-  // localStorageからcartのdata取得(from JSON to JS)
-  const currentCart = JSON.parse(localStorage.getItem("cart"));
-  // we have to put this data to let cart = []
-  cart.push(...currentCart);
-}
+let cart = JSON.parse(localStorage.getItem("cart"));
 
 // Display products in cart summary
 function displayProductsInCart() {
@@ -56,14 +50,12 @@ function displayProductsInCart() {
     const productHTML = generateCartSummaryHTML(cart[i]);
     summaryContainer.appendChild(productHTML);
   };
-
 }
 
 // This function is called whenever the page is loaded
 async function displayCartSummary() {
   try {
     const products = await doFetch(API_RAINY_DAYS);
-    getItemFromLocalStorage();
     displayProductsInCart(products);
     findRemoveButton();
   } catch (error) {
@@ -72,4 +64,5 @@ async function displayCartSummary() {
 }
 
 displayCartSummary();
+console.log(cart);
 //localStorage.removeItem("cart");

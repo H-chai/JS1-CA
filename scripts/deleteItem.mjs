@@ -9,4 +9,20 @@ export function findRemoveButton() {
 function removeItem(event) {
   const clickedButton = event.currentTarget;
   clickedButton.parentElement.remove();
+  console.log("removed");
+  console.log(clickedButton.parentElement.id);
+
+  // id for removed item
+  const removedItemId = clickedButton.parentElement.id;
+  // index of the removed item in localStorage
+  const currentCart = JSON.parse(localStorage.getItem("cart"));
+  const removedItemIndex = currentCart.findIndex(product => product.id === removedItemId);
+  currentCart.splice(removedItemIndex, 1);
+  // save the data in localStorage (in JSON data)
+  localStorage.setItem("cart", JSON.stringify(currentCart));
 }
+
+// removeした時にlocalStorageからも削除しないといけない
+// じゃないとリロードした時に消えてないことになる
+// removeするアイテムのindexを取得
+// →このindexはlocalStorageのindexと一致している
