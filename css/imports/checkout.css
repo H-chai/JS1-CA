@@ -162,6 +162,7 @@
 .cart-product {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 2.4rem 0;
   border-top: 1px solid rgba(113, 120, 126, .3);
   border-bottom: 1px solid rgba(113, 120, 126, .3);

@@ -1,4 +1,5 @@
 import { API_RAINY_DAYS } from "./constants.mjs";
+import { findRemoveButton } from "./deleteItem.mjs";
 import { doFetch } from "./doFetch.mjs";
 
 // Generate HTML in cart summary
@@ -64,6 +65,7 @@ async function displayCartSummary() {
     const products = await doFetch(API_RAINY_DAYS);
     getItemFromLocalStorage();
     displayProductsInCart(products);
+    findRemoveButton();
   } catch (error) {
     console.log(error);
   }
