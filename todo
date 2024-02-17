@@ -1,0 +1,18 @@
+// 同じアイテムのとき個数のみ変える
+
+// 合計金額出す
+
+個数input:value変更したら合計金額も変える
+
+フィルター機能をトップページにつける
+
+subtotal消す
+
+add event listener to input tag
+event type "input"
+
+function xxxx {
+  input value e.target.valueがlocalStorageのamountになるようにする
+  update localStorage ... localStorage.setItem("cart", JSON.stringify(currentLocalStorageData));
+  call displayTotalCost
+}

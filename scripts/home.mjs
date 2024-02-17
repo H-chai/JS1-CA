@@ -8,6 +8,7 @@ import { doFetch } from "./doFetch.mjs";
 function generateProductsHTML(product) {
   const productWrapper = document.createElement("div");
   productWrapper.classList.add("product-wrapper");
+  productWrapper.id = product.id;
 
   const productImageWrapper = document.createElement("div");
   productImageWrapper.classList.add("product-image-wrapper");

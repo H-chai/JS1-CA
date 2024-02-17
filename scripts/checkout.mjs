@@ -2,11 +2,15 @@ import { API_RAINY_DAYS } from "./constants.mjs";
 import { findRemoveButton } from "./deleteItem.mjs";
 import { doFetch } from "./doFetch.mjs";
 
+let cart = JSON.parse(localStorage.getItem("cart"));
+
 // Generate HTML in cart summary
 function generateCartSummaryHTML(product) {
+  console.log(product);
   const cartWrapper = document.createElement("div");
   cartWrapper.classList.add("cart-product");
   cartWrapper.id = product.id;
+  console.log(cartWrapper);
 
   const cartDetail = document.createElement("div");
   cartDetail.classList.add("cart-detail");
@@ -26,7 +30,7 @@ function generateCartSummaryHTML(product) {
   productPrice.textContent = product.price;
   const quantityInput = document.createElement("input");
   quantityInput.classList.add("cart-quantity");
-  quantityInput.value = "1";
+  quantityInput.value = product.amount;
   quantityInput.type = "number";
 
   const removeButton = document.createElement("button");
@@ -39,7 +43,6 @@ function generateCartSummaryHTML(product) {
   return cartWrapper;
 }
 
-let cart = JSON.parse(localStorage.getItem("cart"));
 
 // Display products in cart summary
 function displayProductsInCart() {
@@ -51,6 +54,34 @@ function displayProductsInCart() {
     summaryContainer.appendChild(productHTML);
   };
 }
+// Total
+function totalCost() {
+  const currentCart = JSON.parse(localStorage.getItem("cart"));
+  if (currentCart === null) {
+    return 0;
+  }
+  console.log(currentCart);
+  let total = 0;
+  for(let i = 0; i < currentCart.length; i++) {
+    const priceString = currentCart[i].price;
+    // remove $
+    priceString.substring(1);
+    // convert to number
+    const priceNumber = Number(priceString.substring(1));
+    // console.log(Number(priceString.substring(1)));
+    total = total + priceNumber * currentCart[i].amount;
+  }
+  return total;
+}
+
+// Display total cost
+export function displayTotalCost() {
+  const totalCostContainer = document.getElementById("total-cost");
+  console.log(totalCostContainer);
+  const total = totalCost().toFixed(2);
+  totalCostContainer.textContent = `$${total}`;
+}
+
 
 // This function is called whenever the page is loaded
 async function displayCartSummary() {
@@ -65,4 +96,5 @@ async function displayCartSummary() {
 
 displayCartSummary();
 console.log(cart);
+displayTotalCost();
 //localStorage.removeItem("cart");

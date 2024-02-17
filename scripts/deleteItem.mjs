@@ -1,3 +1,5 @@
+import { displayTotalCost } from "./checkout.mjs";
+
 // Find the remove button/buttons and give them the remove function
 export function findRemoveButton() {
   const removeButtons = document.querySelectorAll(".remove-button");
@@ -20,9 +22,6 @@ function removeItem(event) {
   currentCart.splice(removedItemIndex, 1);
   // save the data in localStorage (in JSON data)
   localStorage.setItem("cart", JSON.stringify(currentCart));
-}
 
-// removeした時にlocalStorageからも削除しないといけない
-// じゃないとリロードした時に消えてないことになる
-// removeするアイテムのindexを取得
-// →このindexはlocalStorageのindexと一致している
+  displayTotalCost();
+}
