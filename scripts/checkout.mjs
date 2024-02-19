@@ -1,16 +1,17 @@
 import { API_RAINY_DAYS } from "./constants.mjs";
 import { findRemoveButton } from "./deleteItem.mjs";
 import { doFetch } from "./doFetch.mjs";
+import { changeInputValue } from "./changeInputValue.mjs";
 
 let cart = JSON.parse(localStorage.getItem("cart"));
 
 // Generate HTML in cart summary
 function generateCartSummaryHTML(product) {
-  console.log(product);
+  //console.log(product);
   const cartWrapper = document.createElement("div");
   cartWrapper.classList.add("cart-product");
   cartWrapper.id = product.id;
-  console.log(cartWrapper);
+  //console.log(cartWrapper);
 
   const cartDetail = document.createElement("div");
   cartDetail.classList.add("cart-detail");
@@ -60,7 +61,7 @@ function totalCost() {
   if (currentCart === null) {
     return 0;
   }
-  console.log(currentCart);
+  //console.log(currentCart);
   let total = 0;
   for(let i = 0; i < currentCart.length; i++) {
     const priceString = currentCart[i].price;
@@ -77,7 +78,7 @@ function totalCost() {
 // Display total cost
 export function displayTotalCost() {
   const totalCostContainer = document.getElementById("total-cost");
-  console.log(totalCostContainer);
+  //console.log(totalCostContainer);
   const total = totalCost().toFixed(2);
   totalCostContainer.textContent = `$${total}`;
 }
@@ -89,12 +90,13 @@ async function displayCartSummary() {
     const products = await doFetch(API_RAINY_DAYS);
     displayProductsInCart(products);
     findRemoveButton();
+    changeInputValue();
   } catch (error) {
     console.log(error);
   }
 }
 
 displayCartSummary();
-console.log(cart);
+//console.log(cart);
 displayTotalCost();
 //localStorage.removeItem("cart");

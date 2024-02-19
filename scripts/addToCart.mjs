@@ -5,7 +5,7 @@ function getAndUpdateAmount(id) {
     return 1;
   }
   for(let i = 0; i < currentLocalStorageData.length; i++) {
-    console.log(currentLocalStorageData[i].id == id);
+    //console.log(currentLocalStorageData[i].id == id);
     if (currentLocalStorageData[i].id === id) {
       currentLocalStorageData[i].amount++;
       console.log(currentLocalStorageData);
@@ -25,7 +25,7 @@ export function addToCart(event) {
 
   if (productWrapper) {
     const itemAmount = getAndUpdateAmount(productWrapper.id);
-    console.log(itemAmount);
+    //console.log(itemAmount);
     if (itemAmount === 1) {
       const productData = {
         image: productWrapper.querySelector(".product-image").src,

@@ -59,7 +59,7 @@ async function findCartIcon() {
   cartIcons.forEach(cartIcon => {
     cartIcon.addEventListener("click", addToCart);
   });
-  console.log(cartIcons);
+  //console.log(cartIcons);
 }
 
 // This function is called whenever the page is loaded
@@ -68,7 +68,7 @@ async function main() {
     const products = await doFetch(API_RAINY_DAYS);
     displayProducts(products);
     findCartIcon();
-    console.log(products);
+    //console.log(products);
   } catch (error) {
     console.log(error);
   }
