@@ -1,7 +1,7 @@
 import { API_RAINY_DAYS } from "./constants.mjs";
 import { doFetch } from "./doFetch.mjs";
 import { findCartIcon } from "./addToCart.mjs";
-//import { chooseGender } from "./filterGender.mjs";
+import { pageLoading } from "./loading.mjs";
 
 // Get a list of products
 // Display a list of products
@@ -115,6 +115,7 @@ async function displayFilteredProducts(event) {
 async function main() {
   try {
     const products = await doFetch(API_RAINY_DAYS);
+    pageLoading();
     displayProducts(products);
     findCartIcon();
     chooseGender();

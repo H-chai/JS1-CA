@@ -2,6 +2,7 @@ import { API_RAINY_DAYS } from "./constants.mjs";
 import { findRemoveButton } from "./deleteItem.mjs";
 import { doFetch } from "./doFetch.mjs";
 import { changeInputValue } from "./changeInputValue.mjs";
+import { pageLoading } from "./loading.mjs";
 
 let cart = JSON.parse(localStorage.getItem("cart"));
 
@@ -88,6 +89,7 @@ export function displayTotalCost() {
 async function displayCartSummary() {
   try {
     const products = await doFetch(API_RAINY_DAYS);
+    pageLoading();
     displayProductsInCart(products);
     findRemoveButton();
     changeInputValue();
