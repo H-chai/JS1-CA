@@ -6,7 +6,8 @@
     letter-spacing: 3px;
     text-transform: uppercase;
     font-weight: 500;
-    margin-bottom: 2.4rem;
+    padding-bottom: 2.4rem;
+    border-bottom: 1px solid rgba(113, 120, 126, .3);
   }
 }
 
@@ -164,7 +165,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 2.4rem 0;
-  border-top: 1px solid rgba(113, 120, 126, .3);
   border-bottom: 1px solid rgba(113, 120, 126, .3);
 
   .cart-product-image {

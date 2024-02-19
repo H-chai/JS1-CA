@@ -99,4 +99,3 @@ async function displayCartSummary() {
 displayCartSummary();
 //console.log(cart);
 displayTotalCost();
-//localStorage.removeItem("cart");

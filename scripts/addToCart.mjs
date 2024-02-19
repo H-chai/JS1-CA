@@ -16,7 +16,15 @@ function getAndUpdateAmount(id) {
   return 1;
 }
 
-export function addToCart(event) {
+// Find the cart icon/buttons and give them the add function
+export async function findCartIcon() {
+  const cartIcons = document.querySelectorAll(".add-to-cart-icon");
+  cartIcons.forEach(cartIcon => {
+    cartIcon.addEventListener("click", addToCart);
+  });
+}
+
+function addToCart(event) {
   const clickedCart = event.target;
   
   const productWrapper = clickedCart.closest(".product-wrapper");
@@ -32,7 +40,8 @@ export function addToCart(event) {
         title: productWrapper.querySelector(".product-name").textContent,
         price: productWrapper.querySelector(".product-price").textContent,
         id: productWrapper.id,
-        amount: itemAmount
+        amount: itemAmount,
+        gender: productWrapper.gender,
       }
       updateCartSummary(productData);
     }
@@ -51,7 +60,6 @@ function updateCartSummary(productData) {
     // get current storage data in JS
     const currentCart = JSON.parse(localStorage.getItem("cart"));
     currentCart.push(productData); // This is JS object
-    // console.log(currentCart);
     // save the data in localStorage (in JSON data)
     localStorage.setItem("cart", JSON.stringify(currentCart));
   } else {
