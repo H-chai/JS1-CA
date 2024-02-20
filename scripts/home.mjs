@@ -105,11 +105,13 @@ async function displayFilteredProducts(event) {
     : allProducts.filter(product => product.gender === "Female");
   
     displayProducts(filteredProducts);
+    selectProduct();
   } else {
     clickedButton.classList.remove("on-click");
     const allProducts = await doFetch(API_RAINY_DAYS);
 
     displayProducts(allProducts);
+    selectProduct();
   }
 }
 
