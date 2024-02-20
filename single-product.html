@@ -6,12 +6,13 @@
   <meta name="description" content="The home page of Rainy Days">
   <title>Aqua Shield</title>
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&display=swap" rel="stylesheet">
-
+  <script type="module" src="./scripts/singleProduct.mjs"></script>
 </head>
 <body>
   <div id="loading">
@@ -82,50 +83,7 @@
     
   </header>
 
-  <main>
-    <section class="item-container">
-      <div class="item-image">
-        <img src="image/Aqua-Shield.png" alt="Aqua Shield">
-      </div>
-      <div class="item-text">
-        <h2 class="item-name">Aqua Shield</h2>
-        <p class="item-price">$110.00</p>
-        <div class="size-selector">
-          <p>Size</p>
-          <ul>
-            <li tabindex="0">XS</li>
-            <li tabindex="0">S</li>
-            <li tabindex="0">M</li>
-            <li tabindex="0">L</li>
-            <li tabindex="0">XL</li>
-            <li tabindex="0">XXL</li>
-          </ul>
-        </div>
-        <p class="item-description description-desktop">Lorem ipsum dolor sit amet consectetur. Sed pharetra laoreet ac amet sit donec neque nulla. Pellentesque suspendisse mattis non nisi habitasse. Eget enim neque nunc fringilla. Amet eu vitae urna nibh pharetra ut interdum amet nibh. Cursus neque sagittis cursus diam nunc vulputate arcu bibendum morbi. Feugiat vestibulum pharetra ullamcorper quis nulla venenatis donec non. Malesuada est facilisis tellus eleifend adipiscing laoreet elit amet.</p>
-        <div class="cta-wishlist">
-          <a href="checkout.html" class="cta-link-checkout">
-            <button class="cta checkout-cta">Add to bag</button>
-          </a>
-          <div class="icon-border">
-            <iconify-icon icon="ph:heart-bold" style="color: #00658c;" width="24" height="24" class="icon-desktop" aria-label="Add to wishlist" tabindex="0"></iconify-icon>
-            <iconify-icon icon="ph:heart-bold" style="color: #00658c;" width="20" height="20" class="icon-mobile" aria-label="Add to wishlist" tabindex="0"></iconify-icon>
-          </div>
-        </div>
-        <div class="condition">
-          <iconify-icon icon="gg:check-o" style="color: #191c1e;" width="24" height="24" class="icon-desktop"></iconify-icon>
-          <iconify-icon icon="gg:check-o" style="color: #191c1e;" width="16" height="16" class="icon-mobile"></iconify-icon>
-          <a href="#">Guarantee & Free Returns</a>
-        </div>
-        <div class="condition">
-          <iconify-icon icon="la:shipping-fast" style="color: #191c1e;" width="24" height="24" class="icon-desktop"></iconify-icon>
-          <iconify-icon icon="la:shipping-fast" style="color: #191c1e;" width="16" height="16" class="icon-mobile"></iconify-icon>
-          <a href="#">Shipping & Returns</a>
-        </div>
-        <p class="item-description description-mobile">Lorem ipsum dolor sit amet consectetur. Sed pharetra laoreet ac amet sit donec neque nulla. Pellentesque suspendisse mattis non nisi habitasse. Eget enim neque nunc fringilla. Amet eu vitae urna nibh pharetra ut interdum amet nibh. Cursus neque sagittis cursus diam nunc vulputate arcu bibendum morbi. Feugiat vestibulum pharetra ullamcorper quis nulla venenatis donec non. Malesuada est facilisis tellus eleifend adipiscing laoreet elit amet.</p>
-      </div>
-    </section>
-
-  </main>
+  <main class="single-product-container"></main>
 
   <footer>
     <div class="footer-container">
@@ -168,10 +126,5 @@
   </footer>
 
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-  <script>
-    window.onload = function () {
-      const spinner = document.getElementById('loading');
-      spinner.classList.add('loaded');
-    }
-  </script>
+
 </body>

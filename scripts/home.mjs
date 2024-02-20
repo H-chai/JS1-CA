@@ -11,9 +11,12 @@ function generateProductsHTML(product) {
   productWrapper.classList.add("product-wrapper");
   productWrapper.id = product.id;
   productWrapper.gender = product.gender;
+  productWrapper.sizes = product.sizes;
+  productWrapper.description = product.description;
 
-  const productImageWrapper = document.createElement("div");
+  const productImageWrapper = document.createElement("a");
   productImageWrapper.classList.add("product-image-wrapper");
+  productImageWrapper.href = "../single-product.html";
   const productImage = document.createElement("img");
   productImage.classList.add("product-image");
   productImage.src = product.image;
@@ -25,7 +28,7 @@ function generateProductsHTML(product) {
 
   const productDetailWrapper = document.createElement("div");
   productDetailWrapper.classList.add("product-detail");
-  const productTitle = document.createElement("a");
+  const productTitle = document.createElement("p");
   productTitle.classList.add("product-name");
   productTitle.textContent = product.title;
 
@@ -108,7 +111,33 @@ async function displayFilteredProducts(event) {
 
     displayProducts(allProducts);
   }
-  
+}
+
+// Get selected product and set into localStorage
+function selectProduct() {
+  const clickedProducts = document.querySelectorAll(".product-image-wrapper");
+  clickedProducts.forEach(product => {
+    product.addEventListener("click", event => {
+      showSinglePage(event);
+    });
+  })
+}
+
+function showSinglePage (event) {
+  const clickedProduct = event.currentTarget;
+  console.log(clickedProduct);
+  const productWrapper = clickedProduct.closest(".product-wrapper");
+  const productData = {
+    image: productWrapper.querySelector(".product-image").src,
+    title: productWrapper.querySelector(".product-name").textContent,
+    price: productWrapper.querySelector(".product-price").textContent,
+    id: productWrapper.id,
+    gender: productWrapper.gender,
+    sizes: productWrapper.sizes,
+    description: productWrapper.description,
+  }
+  console.log(productData);
+  localStorage.setItem("selectedProduct", JSON.stringify(productData));
 }
 
 // This function is called whenever the page is loaded
@@ -119,7 +148,8 @@ async function main() {
     displayProducts(products);
     findCartIcon();
     chooseGender();
-    //console.log(products);
+    selectProduct();
+    console.log(products);
     //console.log(Array.isArray(products));
   } catch (error) {
     console.log(error);

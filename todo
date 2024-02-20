@@ -1,0 +1,6 @@
+<iconify-icon icon="ph:heart-bold" style="color: #00658c;" width="24" height="24" class="icon-desktop" aria-label="Add to wishlist" tabindex="0"></iconify-icon>
+<iconify-icon icon="ph:heart-bold" style="color: #00658c;" width="20" height="20" class="icon-mobile" aria-label="Add to wishlist" tabindex="0"></iconify-icon>
+
+
+<iconify-icon icon="gg:check-o" style="color: #191c1e;" width="24" height="24" class="icon-desktop"></iconify-icon>
+<iconify-icon icon="gg:check-o" style="color: #191c1e;" width="16" height="16" class="icon-mobile"></iconify-icon>

@@ -230,12 +230,6 @@
   font-weight: 400;
   margin-top: 1.6rem;
   margin-bottom: .8rem;
-  transition: .3s;
-  cursor: pointer;
-}
-
-.product-name:hover {
-  color: #949494;
 }
 
 .price-and-cart {
@@ -249,13 +243,7 @@
     color: var(--font-bg-black);
     font-size: 1.6rem;
     line-height: 1.5;
-    transition: .3s;
-    cursor: pointer;
   }
-}
-
-.product-price:hover {
-  color: #949494;
 }
 
 #size-aqua-shield,
