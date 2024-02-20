@@ -50,7 +50,7 @@ function generateSingleProductHTML(product) {
   ctaWishlist.classList.add("cta-wishlist");
   const linkCheckout = document.createElement("a");
   linkCheckout.classList.add("cta-link-checkout");
-  linkCheckout.href = "../checkout.html";
+  linkCheckout.href = "checkout.html";
   const ctaButton = document.createElement("button");
   ctaButton.classList.add("cta", "checkout-cta");
   ctaButton.textContent = "Add to bag";
