@@ -16,7 +16,7 @@ function generateProductsHTML(product) {
 
   const productImageWrapper = document.createElement("a");
   productImageWrapper.classList.add("product-image-wrapper");
-  productImageWrapper.href = "../single-product.html";
+  productImageWrapper.href = "single-product.html";
   const productImage = document.createElement("img");
   productImage.classList.add("product-image");
   productImage.src = product.image;
