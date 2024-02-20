@@ -1,5 +1,5 @@
 // Add to cart function
-function getAndUpdateAmount(id) {
+export function getAndUpdateAmount(id) {
   const currentLocalStorageData = JSON.parse(localStorage.getItem("cart"));
   if (currentLocalStorageData === null) {
     return 1;
@@ -50,7 +50,7 @@ function addToCart(event) {
 }
 
 
-function updateCartSummary(productData) {
+export function updateCartSummary(productData) {
 
   const currentLocalStorageData = localStorage.getItem("cart");
 

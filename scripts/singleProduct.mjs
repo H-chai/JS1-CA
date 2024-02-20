@@ -1,4 +1,5 @@
 import { pageLoading } from "./loading.mjs";
+import { findAddButton } from "./singlePageAddToCart.mjs";
 
 function generateSingleProductHTML(product) {
   const itemContainer = document.createElement("div");
@@ -107,6 +108,7 @@ async function displaySingleProductPage() {
     const selectedProductData = JSON.parse(productDataLocalStorage);
     if (selectedProductData) {
       displaySingleProduct([selectedProductData]);
+      findAddButton();
     }
     pageLoading();
   } catch (error) {
