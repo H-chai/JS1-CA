@@ -91,7 +91,7 @@ function showOrderConfirmation() {
     if (currentLocalStorageData === "[]") {
       alert("Your cart is empty");
     } else {
-      orderButton.href = "../checkout-success.html";
+      orderButton.href = "checkout-success.html";
     }
   })
 }
