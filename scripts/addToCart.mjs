@@ -8,7 +8,6 @@ export function getAndUpdateAmount(id) {
     //console.log(currentLocalStorageData[i].id == id);
     if (currentLocalStorageData[i].id === id) {
       currentLocalStorageData[i].amount++;
-      console.log(currentLocalStorageData);
       localStorage.setItem("cart", JSON.stringify(currentLocalStorageData));
       return currentLocalStorageData[i].amount;
     }

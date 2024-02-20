@@ -127,7 +127,6 @@ function selectProduct() {
 
 function showSinglePage (event) {
   const clickedProduct = event.currentTarget;
-  console.log(clickedProduct);
   const productWrapper = clickedProduct.closest(".product-wrapper");
   const productData = {
     image: productWrapper.querySelector(".product-image").src,
@@ -138,7 +137,6 @@ function showSinglePage (event) {
     sizes: productWrapper.sizes,
     description: productWrapper.description,
   }
-  console.log(productData);
   localStorage.setItem("selectedProduct", JSON.stringify(productData));
 }
 
@@ -151,8 +149,6 @@ async function main() {
     findCartIcon();
     chooseGender();
     selectProduct();
-    console.log(products);
-    //console.log(Array.isArray(products));
   } catch (error) {
     console.log(error);
   }

@@ -11,8 +11,6 @@ export function findRemoveButton() {
 function removeItem(event) {
   const clickedButton = event.currentTarget;
   clickedButton.parentElement.remove();
-  console.log("removed");
-  console.log(clickedButton.parentElement.id);
 
   // id for removed item
   const removedItemId = clickedButton.parentElement.id;
