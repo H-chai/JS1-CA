@@ -84,6 +84,18 @@ export function displayTotalCost() {
   totalCostContainer.textContent = `$${total}`;
 }
 
+function showOrderConfirmation() {
+  const orderButton = document.querySelector(".cta-link-purchase");
+  orderButton.addEventListener("click", () => {
+    const currentLocalStorageData = localStorage.getItem("cart");
+    if (currentLocalStorageData === "[]") {
+      alert("Your cart is empty");
+    } else {
+      orderButton.href = "../checkout-success.html";
+    }
+  })
+}
+
 
 // This function is called whenever the page is loaded
 async function displayCartSummary() {
@@ -93,6 +105,7 @@ async function displayCartSummary() {
     displayProductsInCart(products);
     findRemoveButton();
     changeInputValue();
+    showOrderConfirmation();
   } catch (error) {
     console.log(error);
   }
