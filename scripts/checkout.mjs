@@ -90,6 +90,7 @@ function showOrderConfirmation() {
       alert("Your cart is empty");
     } else {
       orderButton.href = "checkout-success.html";
+      localStorage.removeItem("cart");
     }
   })
 }

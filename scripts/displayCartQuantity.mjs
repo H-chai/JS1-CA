@@ -9,11 +9,15 @@ export function getTotalAmount() {
     quantityContainer.appendChild(quantityText);
 
     let totalAmount = 0;
-    for(let i = 0; i < currentLocalStorageData.length; i++) {
-      const itemAmountPerItem = currentLocalStorageData[i].amount;
-      totalAmount = totalAmount + itemAmountPerItem;
+    if (currentLocalStorageData !== null) {
+      for(let i = 0; i < currentLocalStorageData.length; i++) {
+        const itemAmountPerItem = currentLocalStorageData[i].amount;
+        totalAmount = totalAmount + itemAmountPerItem;
+      }
+      quantityText.textContent = totalAmount;
+    } else {
+      quantityText.textContent = "0";
     }
-    quantityText.textContent = totalAmount;
   });
 
 }

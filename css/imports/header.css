@@ -216,6 +216,7 @@ iconify-icon {
   .quantity-text {
     top: -35%;
     right: -65%;
+    z-index: 999;
   }
 
 
