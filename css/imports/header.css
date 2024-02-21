@@ -204,12 +204,18 @@ iconify-icon {
     & ul {
       list-style: none;
       display: flex;
+      gap: 3rem
     }
 
     & .header-responsive-icon, label {
       position: relative;
       z-index: 999;
     }
+  }
+
+  .quantity-text {
+    top: -35%;
+    right: -65%;
   }
 
 
