@@ -1,4 +1,5 @@
 import { displayTotalCost } from "./checkout.mjs";
+import { getTotalAmount } from "./displayCartQuantity.mjs";
 
 // Find the remove button/buttons and give them the remove function
 export function findRemoveButton() {
@@ -22,4 +23,5 @@ function removeItem(event) {
   localStorage.setItem("cart", JSON.stringify(currentCart));
 
   displayTotalCost();
+  getTotalAmount();
 }

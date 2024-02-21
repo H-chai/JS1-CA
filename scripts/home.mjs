@@ -2,6 +2,7 @@ import { API_RAINY_DAYS } from "./constants.mjs";
 import { doFetch } from "./doFetch.mjs";
 import { findCartIcon } from "./addToCart.mjs";
 import { pageLoading } from "./loading.mjs";
+import { getTotalAmount } from "./displayCartQuantity.mjs";
 
 // Get a list of products
 // Display a list of products
@@ -149,6 +150,7 @@ async function main() {
     findCartIcon();
     chooseGender();
     selectProduct();
+    getTotalAmount();
   } catch (error) {
     console.log(error);
   }

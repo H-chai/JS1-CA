@@ -1,3 +1,5 @@
+import { getTotalAmount } from "./displayCartQuantity.mjs";
+
 // Add to cart function
 export function getAndUpdateAmount(id) {
   const currentLocalStorageData = JSON.parse(localStorage.getItem("cart"));
@@ -5,7 +7,6 @@ export function getAndUpdateAmount(id) {
     return 1;
   }
   for(let i = 0; i < currentLocalStorageData.length; i++) {
-    //console.log(currentLocalStorageData[i].id == id);
     if (currentLocalStorageData[i].id === id) {
       currentLocalStorageData[i].amount++;
       localStorage.setItem("cart", JSON.stringify(currentLocalStorageData));
@@ -32,7 +33,6 @@ function addToCart(event) {
 
   if (productWrapper) {
     const itemAmount = getAndUpdateAmount(productWrapper.id);
-    //console.log(itemAmount);
     if (itemAmount === 1) {
       const productData = {
         image: productWrapper.querySelector(".product-image").src,
@@ -44,15 +44,15 @@ function addToCart(event) {
       }
       updateCartSummary(productData);
     }
-
   }
+  getTotalAmount();
 }
 
 
 export function updateCartSummary(productData) {
 
   const currentLocalStorageData = localStorage.getItem("cart");
-
+  
   if (currentLocalStorageData === null) {
     // making JSON empty array
     localStorage.setItem("cart", JSON.stringify([]));
@@ -66,5 +66,5 @@ export function updateCartSummary(productData) {
     currentCart.push(productData);
     localStorage.setItem("cart", JSON.stringify(currentCart));
   }
-
+  
 }

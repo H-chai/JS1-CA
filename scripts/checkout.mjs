@@ -3,6 +3,7 @@ import { findRemoveButton } from "./deleteItem.mjs";
 import { doFetch } from "./doFetch.mjs";
 import { changeInputValue } from "./changeInputValue.mjs";
 import { pageLoading } from "./loading.mjs";
+import { getTotalAmount } from "./displayCartQuantity.mjs";
 
 let cart = JSON.parse(localStorage.getItem("cart"));
 
@@ -62,7 +63,6 @@ function totalCost() {
   if (currentCart === null) {
     return 0;
   }
-  //console.log(currentCart);
   let total = 0;
   for(let i = 0; i < currentCart.length; i++) {
     const priceString = currentCart[i].price;
@@ -70,7 +70,6 @@ function totalCost() {
     priceString.substring(1);
     // convert to number
     const priceNumber = Number(priceString.substring(1));
-    // console.log(Number(priceString.substring(1)));
     total = total + priceNumber * currentCart[i].amount;
   }
   return total;
@@ -79,7 +78,6 @@ function totalCost() {
 // Display total cost
 export function displayTotalCost() {
   const totalCostContainer = document.getElementById("total-cost");
-  //console.log(totalCostContainer);
   const total = totalCost().toFixed(2);
   totalCostContainer.textContent = `$${total}`;
 }
@@ -106,6 +104,7 @@ async function displayCartSummary() {
     findRemoveButton();
     changeInputValue();
     showOrderConfirmation();
+    getTotalAmount();
   } catch (error) {
     console.log(error);
   }
