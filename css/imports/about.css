@@ -43,7 +43,7 @@
   margin-right: 8rem;
 }
 
-.image-wrapper {
+.about-image-wrapper {
   width: 60%;
 
   & img {
@@ -96,7 +96,7 @@
     margin-right: 6rem;
   }
   
-  .image-wrapper {
+  .about-image-wrapper {
     width: 50%;
   }
 
@@ -146,7 +146,7 @@
     margin-right: 0rem;
   }
 
-  .image-wrapper {
+  .about-image-wrapper {
     width: 100%;
   }
 
