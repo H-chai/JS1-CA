@@ -9,11 +9,9 @@ let cart = JSON.parse(localStorage.getItem("cart"));
 
 // Generate HTML in cart summary
 function generateCartSummaryHTML(product) {
-  //console.log(product);
   const cartWrapper = document.createElement("div");
   cartWrapper.classList.add("cart-product");
   cartWrapper.id = product.id;
-  //console.log(cartWrapper);
 
   const cartDetail = document.createElement("div");
   cartDetail.classList.add("cart-detail");
@@ -112,5 +110,4 @@ async function displayCartSummary() {
 }
 
 displayCartSummary();
-//console.log(cart);
 displayTotalCost();
