@@ -3,14 +3,14 @@ export function getTotalAmount() {
 
   const quantityContainers = document.querySelectorAll(".quantity-container");
 
-  Array.from(quantityContainers).forEach(quantityContainer => {
+  Array.from(quantityContainers).forEach((quantityContainer) => {
     const quantityText = document.createElement("p");
     quantityText.classList.add("quantity-text");
     quantityContainer.appendChild(quantityText);
 
     let totalAmount = 0;
     if (currentLocalStorageData !== null) {
-      for(let i = 0; i < currentLocalStorageData.length; i++) {
+      for (let i = 0; i < currentLocalStorageData.length; i++) {
         const itemAmountPerItem = currentLocalStorageData[i].amount;
         totalAmount = totalAmount + itemAmountPerItem;
       }
@@ -19,8 +19,6 @@ export function getTotalAmount() {
       quantityText.textContent = "0";
     }
   });
-
 }
 
 getTotalAmount();
-

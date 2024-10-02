@@ -39,14 +39,19 @@ function generateProductsHTML(product) {
   productPrice.classList.add("product-price");
   productPrice.textContent = `$${product.price}`;
   const addToCartIcon = document.createElement("button");
-  addToCartIcon.classList.add("fa-solid", "fa-cart-plus", "fa-xl", "add-to-cart-icon");
+  addToCartIcon.classList.add(
+    "fa-solid",
+    "fa-cart-plus",
+    "fa-xl",
+    "add-to-cart-icon",
+  );
 
   priceWrapper.append(productPrice, addToCartIcon);
 
   productDetailWrapper.append(productTitle, priceWrapper);
 
   productWrapper.append(productImageWrapper, productDetailWrapper);
-  
+
   return productWrapper;
 }
 
@@ -55,10 +60,10 @@ export async function displayProducts(products) {
   // For each of the products, generate HTML for the product
   const productContainer = document.querySelector(".featured-product");
   productContainer.innerHTML = "";
-  products.forEach(product => {
+  products.forEach((product) => {
     const productHTML = generateProductsHTML(product);
     productContainer.appendChild(productHTML);
-  })
+  });
 }
 
 function generateFilterButtonsHTML() {
@@ -75,7 +80,7 @@ function generateFilterButtonsHTML() {
 function chooseGender() {
   generateFilterButtonsHTML();
   const genderButtons = document.querySelectorAll(".gender-button");
-  genderButtons.forEach(genderButton => {
+  genderButtons.forEach((genderButton) => {
     genderButton.addEventListener("click", displayFilteredProducts);
   });
 }
@@ -85,7 +90,7 @@ let isWomenButtonOn = false;
 
 async function displayFilteredProducts(event) {
   const clickedButton = event.target;
-  
+
   // toggling – turning buttons on and off with each click
   if (clickedButton.classList.contains("men-button")) {
     isMenButtonOn = !isMenButtonOn;
@@ -100,11 +105,10 @@ async function displayFilteredProducts(event) {
   if (isMenButtonOn || isWomenButtonOn) {
     clickedButton.classList.add("on-click");
     const allProducts = await doFetch(API_RAINY_DAYS);
-    const filteredProducts = 
-    isMenButtonOn
-    ? allProducts.filter(product => product.gender === "Male")
-    : allProducts.filter(product => product.gender === "Female");
-  
+    const filteredProducts = isMenButtonOn
+      ? allProducts.filter((product) => product.gender === "Male")
+      : allProducts.filter((product) => product.gender === "Female");
+
     displayProducts(filteredProducts);
     selectProduct();
   } else {
@@ -119,14 +123,14 @@ async function displayFilteredProducts(event) {
 // Get selected product and set into localStorage
 function selectProduct() {
   const clickedProducts = document.querySelectorAll(".product-image-wrapper");
-  clickedProducts.forEach(product => {
-    product.addEventListener("click", event => {
+  clickedProducts.forEach((product) => {
+    product.addEventListener("click", (event) => {
       showSinglePage(event);
     });
-  })
+  });
 }
 
-function showSinglePage (event) {
+function showSinglePage(event) {
   const clickedProduct = event.currentTarget;
   const productWrapper = clickedProduct.closest(".product-wrapper");
   const productData = {
@@ -137,7 +141,7 @@ function showSinglePage (event) {
     gender: productWrapper.gender,
     sizes: productWrapper.sizes,
     description: productWrapper.description,
-  }
+  };
   localStorage.setItem("selectedProduct", JSON.stringify(productData));
 }
 

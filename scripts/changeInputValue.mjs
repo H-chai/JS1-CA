@@ -2,9 +2,9 @@ import { displayTotalCost } from "./checkout.mjs";
 
 export function changeInputValue() {
   const inputTags = document.querySelectorAll(".cart-quantity");
-  inputTags.forEach(inputTag => {
+  inputTags.forEach((inputTag) => {
     inputTag.addEventListener("input", updateTotalCost);
-  })
+  });
 }
 
 function updateTotalCost(event) {

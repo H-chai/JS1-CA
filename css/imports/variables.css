@@ -2,11 +2,11 @@
 /* This could be colors, fonts, or padding sizes! */
 
 :root {
-  --font-bg-black: #191C1E;
-  --font-bg-blue: #00658C;
-  --footer-bg: #001E2D;
-  --font-roboto: 'Roboto', sans-serif;
-  --font-archivo: 'Archivo Black', sans-serif;
+  --font-bg-black: #191c1e;
+  --font-bg-blue: #00658c;
+  --footer-bg: #001e2d;
+  --font-roboto: "Roboto", sans-serif;
+  --font-archivo: "Archivo Black", sans-serif;
 }
 
 html {

@@ -35,7 +35,12 @@ function generateCartSummaryHTML(product) {
   quantityInput.type = "number";
 
   const removeButton = document.createElement("button");
-  removeButton.classList.add("remove-button", "fa-solid", "fa-trash-can", "fa-2xl");
+  removeButton.classList.add(
+    "remove-button",
+    "fa-solid",
+    "fa-trash-can",
+    "fa-2xl",
+  );
 
   quantityWrapper.append(productTitle, productPrice, quantityInput);
   cartDetail.append(productImage, quantityWrapper);
@@ -44,16 +49,15 @@ function generateCartSummaryHTML(product) {
   return cartWrapper;
 }
 
-
 // Display products in cart summary
 function displayProductsInCart() {
   const summaryContainer = document.getElementById("summary-container");
   summaryContainer.innerHTML = "";
 
-  for(let i = 0; i < cart.length; i++) {
+  for (let i = 0; i < cart.length; i++) {
     const productHTML = generateCartSummaryHTML(cart[i]);
     summaryContainer.appendChild(productHTML);
-  };
+  }
 }
 // Total
 function totalCost() {
@@ -62,7 +66,7 @@ function totalCost() {
     return 0;
   }
   let total = 0;
-  for(let i = 0; i < currentCart.length; i++) {
+  for (let i = 0; i < currentCart.length; i++) {
     const priceString = currentCart[i].price;
     // remove $
     priceString.substring(1);
@@ -90,9 +94,8 @@ function showOrderConfirmation() {
       orderButton.href = "checkout-success.html";
       localStorage.removeItem("cart");
     }
-  })
+  });
 }
-
 
 // This function is called whenever the page is loaded
 async function displayCartSummary() {

@@ -7,7 +7,7 @@
     text-transform: uppercase;
     font-weight: 500;
     padding-bottom: 2.4rem;
-    border-bottom: 1px solid rgba(113, 120, 126, .3);
+    border-bottom: 1px solid rgba(113, 120, 126, 0.3);
   }
 }
 
@@ -28,8 +28,8 @@
   background-color: #fff;
   align-items: center;
   justify-content: center;
-  color: rgba(0, 101, 140, .5);
-  border: 1px solid rgba(0, 101, 140, .5);
+  color: rgba(0, 101, 140, 0.5);
+  border: 1px solid rgba(0, 101, 140, 0.5);
   margin: 0 auto;
 }
 
@@ -42,7 +42,7 @@
 .step {
   font-size: 1.4rem;
   font-weight: 500;
-  color: rgba(25, 28, 30, .5);
+  color: rgba(25, 28, 30, 0.5);
   letter-spacing: 4px;
   text-transform: uppercase;
   margin-top: 1.6rem;
@@ -76,7 +76,7 @@
   margin-bottom: 2.4rem;
 
   & input {
-    border: solid 1px rgba(113, 120, 126, .7);
+    border: solid 1px rgba(113, 120, 126, 0.7);
     padding: 1.6rem;
     font-size: 1.4rem;
     border-radius: 3px;
@@ -116,7 +116,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid rgba(113, 120, 126, .7);
+  border: 1px solid rgba(113, 120, 126, 0.7);
   padding: 2rem;
   margin-bottom: 1.6rem;
   border-radius: 3px;
@@ -130,7 +130,7 @@
     font-size: 1.6rem;
     font-weight: 500;
     line-height: 1.5;
-    letter-spacing: .1px;
+    letter-spacing: 0.1px;
     margin-left: 1.8rem;
     margin-right: 3.2rem;
   }
@@ -144,7 +144,7 @@
 
 .option-logo {
   display: flex;
-  gap: .8rem;
+  gap: 0.8rem;
   flex-wrap: wrap;
 }
 
@@ -165,7 +165,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 2.4rem 0;
-  border-bottom: 1px solid rgba(113, 120, 126, .3);
+  border-bottom: 1px solid rgba(113, 120, 126, 0.3);
 
   .cart-product-image {
     width: 25%;
@@ -228,8 +228,7 @@
   padding: 1.6rem 2rem !important;
 }
 
-@media screen and (max-width:1023px) {
-
+@media screen and (max-width: 1023px) {
   .checkout-main {
     padding: 12rem 6rem;
   }
@@ -248,8 +247,8 @@
     background-color: #fff;
     align-items: center;
     justify-content: center;
-    color: rgba(0, 101, 140, .5);
-    border: 1px solid rgba(0, 101, 140, .5);
+    color: rgba(0, 101, 140, 0.5);
+    border: 1px solid rgba(0, 101, 140, 0.5);
     margin: 0 auto;
   }
 
@@ -266,9 +265,9 @@
 
   .shipping-address {
     padding: 4rem;
-  
+
     & input {
-      border: solid 1px rgba(113, 120, 126, .7);
+      border: solid 1px rgba(113, 120, 126, 0.7);
       margin-bottom: 1rem;
     }
   }
@@ -280,23 +279,22 @@
   .payment-option {
     margin-bottom: 1rem;
   }
-  
+
   .payment-method {
-  
     & label {
       font-size: 1.4rem;
       margin-left: 1rem;
       margin-right: 2.4rem;
     }
-  
+
     & p {
       font-size: 1.2rem;
       line-height: 1.3;
     }
   }
-  
+
   .option-logo {
-    gap: .4rem;
+    gap: 0.4rem;
 
     & img {
       width: 40px;
@@ -310,26 +308,26 @@
   .cart-summary {
     padding: 4rem;
   }
-  
+
   .cart-product {
     padding: 2.4rem 0;
 
     & img {
       width: 30%;
     }
-  
+
     & p {
       font-size: 1.4rem;
-    }  
+    }
   }
 
   .quantity {
     margin-left: 1.8rem;
     margin-right: 1.8rem;
   }
-  
-  .total {  
-    margin-top: .4rem;
+
+  .total {
+    margin-top: 0.4rem;
 
     & p {
       font-size: 1.6rem;
@@ -337,11 +335,10 @@
   }
 }
 
-@media screen and (max-width:767px) {
-
+@media screen and (max-width: 767px) {
   .checkout-main {
     padding: 10rem 1rem 12rem 1rem;
-  
+
     & h2 {
       font-size: 1.6rem;
       margin-bottom: 1.6rem;
@@ -369,7 +366,7 @@
 
   .customer-name {
     flex-direction: column;
-  
+
     & input {
       width: 100%;
     }
@@ -377,7 +374,7 @@
 
   .postcode-city {
     flex-direction: column;
-  
+
     & input {
       width: 100%;
     }
@@ -394,7 +391,7 @@
   .cart-summary-cta {
     width: 100%;
   }
-  
+
   .cart-summary {
     padding: 3rem 1rem 0rem 1rem;
     margin-bottom: 4rem;

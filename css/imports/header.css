@@ -67,14 +67,14 @@ header {
 .header-nav-menu-list::after {
   position: absolute;
   bottom: -3px;
-  left:50%;
+  left: 50%;
   transform: translateX(-50%) scale(0, 1);
   transform-origin: center top;
-  transition: transform .3s;
-  content: '';
+  transition: transform 0.3s;
+  content: "";
   width: 20px;
   height: 2px;
-  background-color: #191C1E;
+  background-color: #191c1e;
 }
 
 .header-nav-menu-list:hover::after {
@@ -84,20 +84,20 @@ header {
 .on-page {
   position: relative;
 }
-  
+
 .on-page::after {
   position: absolute;
   bottom: -3px;
-  left:50%;
+  left: 50%;
   transform: translateX(-50%);
-  content: '';
+  content: "";
   width: 20px;
   height: 2px;
-  background-color: #191C1E;
+  background-color: #191c1e;
 }
 
 iconify-icon {
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .icon-link:hover iconify-icon {
@@ -145,7 +145,7 @@ iconify-icon {
   list-style: none;
   margin-top: 4.8rem;
   padding-top: 3.6rem;
-  border-top: solid 1px rgba(25, 28, 30, .5);
+  border-top: solid 1px rgba(25, 28, 30, 0.5);
 
   & li {
     margin-bottom: 1.6rem;
@@ -162,8 +162,7 @@ iconify-icon {
   }
 }
 
-@media screen and (max-width:1023px) {
-  
+@media screen and (max-width: 1023px) {
   header {
     padding: 1.5rem 6rem;
     position: fixed;
@@ -204,10 +203,11 @@ iconify-icon {
     & ul {
       list-style: none;
       display: flex;
-      gap: 3rem
+      gap: 3rem;
     }
 
-    & .header-responsive-icon, label {
+    & .header-responsive-icon,
+    label {
       position: relative;
       z-index: 999;
     }
@@ -218,12 +218,9 @@ iconify-icon {
     right: -65%;
     z-index: 999;
   }
-
-
 }
 
-@media screen and (max-width:767px) {
-
+@media screen and (max-width: 767px) {
   header {
     padding: 1rem;
   }
@@ -242,11 +239,11 @@ iconify-icon {
   .login-wishlist {
     margin-top: 3rem;
     padding-top: 3rem;
-  
+
     & li {
       margin-bottom: 1.6rem;
     }
-  
+
     & a {
       text-decoration: none;
       display: flex;
@@ -257,5 +254,4 @@ iconify-icon {
       font-weight: 500;
     }
   }
-  
 }

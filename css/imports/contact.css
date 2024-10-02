@@ -1,6 +1,6 @@
 /* Contact page */
 .bg-color {
-  background-color: #DDE3EA;
+  background-color: #dde3ea;
 }
 
 .contact-main {
@@ -89,20 +89,20 @@
   }
 
   & input {
-    border: solid 1px rgba(113, 120, 126, .7);
+    border: solid 1px rgba(113, 120, 126, 0.7);
     padding: 1.6rem;
     font-size: 1.4rem;
   }
 
   & textarea {
-    border: solid 1px rgba(113, 120, 126, .7);
+    border: solid 1px rgba(113, 120, 126, 0.7);
     padding: 1.6rem;
     font-size: 1.4rem;
   }
 }
 
 .customer-input::placeholder {
-  color: #71787E;
+  color: #71787e;
   font-weight: 500;
 }
 
@@ -115,11 +115,10 @@
   width: 44%;
 }
 
-@media screen and (max-width:1023px) {
-
+@media screen and (max-width: 1023px) {
   .contact-main {
     padding: 12rem 6rem 12rem 6rem;
-  
+
     & h1 {
       font-size: 2.8rem;
       margin-bottom: 4rem;
@@ -131,7 +130,7 @@
     background-size: 50%;
     background-position: right 10% bottom 0;
     border-radius: 5px;
-  
+
     & h2 {
       font-size: 2.6rem;
       margin-bottom: 4rem;
@@ -152,11 +151,10 @@
   }
 
   .company-information {
-  
     & iconify-icon {
       margin-right: 2rem;
     }
-  
+
     & p {
       font-size: 1.6rem;
     }
@@ -164,7 +162,7 @@
 
   .contact-input {
     padding: 6rem 0;
-  
+
     & form {
       gap: 2rem;
       width: 82%;
@@ -176,8 +174,7 @@
   }
 }
 
-@media screen and (max-width:767px) {
-
+@media screen and (max-width: 767px) {
   .bg-color {
     background-color: #fff;
   }
@@ -195,7 +192,7 @@
     padding: 5rem 7rem;
     text-align: center;
     background-size: 0;
-  
+
     & h2 {
       font-size: 1.8rem;
       margin-bottom: 3rem;
@@ -208,12 +205,12 @@
 
   .company-information {
     flex-direction: column;
-  
+
     & iconify-icon {
       margin-right: 0;
-      margin-bottom: .8rem;
+      margin-bottom: 0.8rem;
     }
-  
+
     & p {
       font-size: 1.6rem;
     }
@@ -222,7 +219,7 @@
   .contact-input {
     width: 100%;
     padding: 4rem 0 0 0;
-  
+
     & form {
       gap: 1.6rem;
       width: 100%;

@@ -46,7 +46,6 @@ footer {
 }
 
 .newsletter-signup {
-
   & h4 {
     font-family: var(--font-archivo);
     font-size: 2.1rem;
@@ -73,7 +72,7 @@ footer {
   font-size: 1.6rem;
   font-weight: 400;
   padding-bottom: 0.5rem;
-} 
+}
 
 .email::placeholder {
   color: #fff;
@@ -103,7 +102,7 @@ input:focus::placeholder {
   border-radius: 24px;
   border: solid 2px transparent;
   text-align: center;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .signup-button:hover {
@@ -116,8 +115,7 @@ input:focus::placeholder {
   display: none;
 }
 
-@media screen and (max-width:1023px) {
-
+@media screen and (max-width: 1023px) {
   footer {
     padding: 8rem 6rem 4rem 6rem;
   }
@@ -130,7 +128,7 @@ input:focus::placeholder {
   .footer-nav-menu-list {
     padding-bottom: 2rem;
   }
-  
+
   .footer-logo-desktop {
     display: none;
   }
@@ -151,8 +149,7 @@ input:focus::placeholder {
   }
 }
 
-@media screen and (max-width:767px) {
-  
+@media screen and (max-width: 767px) {
   footer {
     padding: 1.5rem 1rem;
   }
@@ -172,7 +169,7 @@ input:focus::placeholder {
     padding: 1rem 0;
     font-size: 1.4rem;
     font-weight: 300;
-    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   }
 
   .sns-wrapper {
@@ -183,33 +180,32 @@ input:focus::placeholder {
       font-weight: 400;
       margin-top: 2rem;
     }
-  
+
     .sns-list {
       justify-content: center;
     }
   }
 
   .newsletter-signup {
-
     & h4 {
       font-size: 1.8rem;
       margin-bottom: 1rem;
     }
-  
+
     & p {
       font-size: 1.4rem;
       font-weight: 300;
       margin-bottom: 1.6rem;
     }
   }
-  
+
   .email {
     border: 1px solid #fff;
     font-size: 1.4rem;
     font-weight: 300;
     padding: 1rem;
     margin-bottom: 3rem;
-  } 
+  }
 
   .signup-button {
     width: 100%;
@@ -217,5 +213,4 @@ input:focus::placeholder {
     font-size: 1.4rem;
     padding: 1rem;
   }
-
 }

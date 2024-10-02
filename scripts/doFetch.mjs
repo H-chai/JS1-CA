@@ -1,10 +1,10 @@
 // fetch Noroff API
 export async function doFetch(url) {
   try {
-    const response = await fetch (url);
+    const response = await fetch(url);
     const data = await response.json();
     return data;
-  } catch(error) {
+  } catch (error) {
     console.error("Error fetching data:" + error);
     throw new Error(error);
   }

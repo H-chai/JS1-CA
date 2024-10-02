@@ -1,7 +1,7 @@
 import { getAndUpdateAmount } from "./addToCart.mjs";
 import { updateCartSummary } from "./addToCart.mjs";
 
-export async function findAddButton () {
+export async function findAddButton() {
   const button = document.querySelector(".checkout-cta");
   button.addEventListener("click", addToCart);
 }
@@ -19,7 +19,7 @@ function addToCart(event) {
       id: selectedProductData.id,
       amount: itemAmount,
       gender: selectedProductData.gender,
-    }
+    };
     updateCartSummary(productData);
   }
 }

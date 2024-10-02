@@ -6,7 +6,7 @@ export function getAndUpdateAmount(id) {
   if (currentLocalStorageData === null) {
     return 1;
   }
-  for(let i = 0; i < currentLocalStorageData.length; i++) {
+  for (let i = 0; i < currentLocalStorageData.length; i++) {
     if (currentLocalStorageData[i].id === id) {
       currentLocalStorageData[i].amount++;
       localStorage.setItem("cart", JSON.stringify(currentLocalStorageData));
@@ -19,14 +19,14 @@ export function getAndUpdateAmount(id) {
 // Find the cart icon/buttons and give them the add function
 export async function findCartIcon() {
   const cartIcons = document.querySelectorAll(".add-to-cart-icon");
-  cartIcons.forEach(cartIcon => {
+  cartIcons.forEach((cartIcon) => {
     cartIcon.addEventListener("click", addToCart);
   });
 }
 
 function addToCart(event) {
   const clickedCart = event.target;
-  
+
   const productWrapper = clickedCart.closest(".product-wrapper");
 
   // check if the item already in cart
@@ -41,18 +41,16 @@ function addToCart(event) {
         id: productWrapper.id,
         amount: itemAmount,
         gender: productWrapper.gender,
-      }
+      };
       updateCartSummary(productData);
     }
   }
   getTotalAmount();
 }
 
-
 export function updateCartSummary(productData) {
-
   const currentLocalStorageData = localStorage.getItem("cart");
-  
+
   if (currentLocalStorageData === null) {
     // making JSON empty array
     localStorage.setItem("cart", JSON.stringify([]));
@@ -66,5 +64,4 @@ export function updateCartSummary(productData) {
     currentCart.push(productData);
     localStorage.setItem("cart", JSON.stringify(currentCart));
   }
-  
 }

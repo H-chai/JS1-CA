@@ -26,7 +26,7 @@
     line-height: 1.2;
     text-transform: uppercase;
     position: relative;
-    }
+  }
 
   & p {
     font-size: 1.6rem;
@@ -46,13 +46,13 @@
 }
 
 .main-visual::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .shop-mens-womens {
@@ -74,7 +74,7 @@
   }
 
   .shop-mens::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
@@ -83,7 +83,7 @@
     background-image: url("../image/mens.jpg");
     background-size: cover;
     background-position: center;
-    transition: all .3s linear;
+    transition: all 0.3s linear;
   }
 
   .shop-mens:hover:after {
@@ -96,7 +96,7 @@
   }
 
   .shop-womens::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
@@ -105,7 +105,7 @@
     background-image: url("../image/womens.jpg");
     background-size: cover;
     background-position: center;
-    transition: all .3s linear;
+    transition: all 0.3s linear;
   }
 
   .shop-womens:hover:after {
@@ -127,10 +127,10 @@
 
 .shop-mens::before,
 .shop-womens::before {
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0;
   left: 0;
@@ -164,7 +164,7 @@
   border: solid 1px var(--font-bg-blue);
   border-radius: 28px;
   padding: 1rem 2rem;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .on-click {
@@ -187,14 +187,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 1px rgba(113, 120, 126, .7);
+  border: solid 1px rgba(113, 120, 126, 0.7);
   position: relative;
   height: 40rem;
 
   & .product-image {
     width: 80%;
     object-fit: contain;
-    transition: .3s;
+    transition: 0.3s;
   }
 
   & .smaller-img {
@@ -203,9 +203,9 @@
 
   & .wish-icon {
     position: absolute;
-    top: 2.0rem;
-    right: 2.0rem;
-    transition: all .3s ease;
+    top: 2rem;
+    right: 2rem;
+    transition: all 0.3s ease;
     color: #1a1c1e;
     cursor: pointer;
   }
@@ -229,7 +229,7 @@
   font-size: 2.1rem;
   font-weight: 400;
   margin-top: 1.6rem;
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
 }
 
 .price-and-cart {
@@ -259,7 +259,7 @@
 .add-to-cart-icon {
   cursor: pointer;
   color: #1a1c1e;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .add-to-cart-icon:hover {
@@ -274,7 +274,7 @@
   display: none;
   width: 100%;
   padding: 2rem 2.4rem;
-  box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, .08);
+  box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.08);
   position: absolute;
   top: 100%;
   left: 0;
@@ -324,7 +324,7 @@
   border-radius: 28px;
   display: block;
   margin: 0 auto;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .cta-link-product {
@@ -336,7 +336,7 @@
 }
 
 .cta:hover {
-  background-color: rgba(0, 101, 140, .8);
+  background-color: rgba(0, 101, 140, 0.8);
 }
 
 .about {
@@ -352,13 +352,13 @@
 }
 
 .about-us {
-  background-color: #D2E5F4;
+  background-color: #d2e5f4;
   width: 50%;
   padding: 6.4rem 5.6rem 7.2rem 5.6rem;
 
   & h2 {
     font-family: var(--font-archivo);
-    color: #0A1E28;
+    color: #0a1e28;
     font-size: 2.8rem;
     margin-bottom: 4rem;
   }
@@ -374,7 +374,7 @@
     font-size: 1.6rem;
     line-height: 1.5;
     margin-top: 1.6rem;
-    color: #0A1E28;
+    color: #0a1e28;
   }
 }
 
@@ -422,8 +422,7 @@
   object-fit: cover;
 }
 
-@media screen and (max-width:1023px) {
-
+@media screen and (max-width: 1023px) {
   .main-visual {
     padding-top: 40vh;
     padding-right: 6rem;
@@ -456,7 +455,7 @@
   .top-product {
     padding: 0 6rem;
     margin-bottom: 10rem;
-  
+
     & h2 {
       margin-bottom: 4rem;
     }
@@ -471,7 +470,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 1rem;
     margin-bottom: 9rem;
-  
+
     & .product-wrapper {
       position: relative;
     }
@@ -479,7 +478,7 @@
 
   .product-image-wrapper {
     height: 30rem;
-  
+
     & .wish-icon {
       display: none;
     }
@@ -495,7 +494,7 @@
   .product-name {
     font-size: 1.6rem;
     margin-top: 1rem;
-    margin-bottom: .4rem;
+    margin-bottom: 0.4rem;
   }
 
   .price-and-cart {
@@ -507,26 +506,25 @@
   .add-to-cart-icon {
     display: none;
   }
-  
+
   .add-to-cart-icon-mobile {
     display: block;
   }
 
   .size-select-box {
     padding: 2rem 1rem;
-  
+
     & p {
       font-size: 1.4rem;
     }
-  
+
     & ul {
       justify-content: space-between;
     }
-  
+
     & a {
       font-size: 1.4rem;
     }
-
   }
 
   .cta {
@@ -536,7 +534,7 @@
   .about {
     padding: 0 6rem;
     margin-bottom: 8rem;
-  
+
     & img {
       width: 42%;
     }
@@ -544,12 +542,12 @@
 
   .about-us {
     padding: 4rem;
-  
+
     & h2 {
       font-size: 2.6rem;
       margin-bottom: 2rem;
     }
-  
+
     & h3 {
       font-size: 2.8rem;
     }
@@ -571,10 +569,7 @@
   }
 }
 
-
-
-@media screen and (max-width:767px) {
-
+@media screen and (max-width: 767px) {
   .main-visual {
     padding-top: 30vh;
     padding-left: 3rem;
@@ -617,7 +612,7 @@
   .top-product {
     padding: 0 1rem;
     margin-bottom: 8rem;
-  
+
     & h2 {
       margin-bottom: 3rem;
       font-size: 2.4rem;
@@ -627,10 +622,10 @@
   #gender-filter {
     margin-bottom: 2.4rem;
   }
-  
+
   .gender-button {
     font-size: 1.4rem;
-    padding: .6rem 2rem;
+    padding: 0.6rem 2rem;
   }
 
   .featured-product {
@@ -639,12 +634,11 @@
     margin-bottom: 4rem;
     width: 100%;
     overflow-x: scroll;
-  
+
     & .product-wrapper {
       width: 70%;
       flex-shrink: 0;
     }
-
   }
 
   .featured-product::-webkit-scrollbar {
@@ -663,7 +657,6 @@
   }
 
   .cta-link-product {
-
     & .cta {
       width: 100%;
       padding: 1rem 0;
@@ -694,7 +687,7 @@
   .cta-link-about {
     width: 100%;
   }
-  
+
   .read-cta {
     width: 100%;
     text-align: center;
@@ -706,8 +699,7 @@
     display: flex;
     flex-direction: column;
     height: auto;
-    gap: .5rem;
+    gap: 0.5rem;
     padding: 0 1rem;
   }
-
 }

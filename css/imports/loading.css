@@ -1,15 +1,15 @@
 #loading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: #D2E5F4;
-    transition: all .5s;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #d2e5f4;
+  transition: all 0.5s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
 }
 
 .loaded {
@@ -29,8 +29,8 @@
   height: 64px;
   margin: 8px;
   border-radius: 50%;
-  border: 6px solid #00658C;
-  border-color: #00658C transparent #00658C transparent;
+  border: 6px solid #00658c;
+  border-color: #00658c transparent #00658c transparent;
   animation: lds-dual-ring 1.2s linear infinite;
 }
 @keyframes lds-dual-ring {

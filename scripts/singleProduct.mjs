@@ -34,12 +34,12 @@ function generateSingleProductHTML(product) {
   const sizeArray = productDataJS.sizes;
   const sizeList = document.createElement("ul");
   sizeList.classList.add("size-list");
-  sizeArray.forEach(size => {
+  sizeArray.forEach((size) => {
     const listItem = document.createElement("li");
     listItem.textContent = size;
     sizeList.appendChild(listItem);
-  })
-  
+  });
+
   sizeWrapper.append(size, sizeList);
 
   const itemDescription = document.createElement("p");
@@ -86,7 +86,16 @@ function generateSingleProductHTML(product) {
   itemDescriptionMobile.classList.add("item-description", "description-mobile");
   itemDescription.textContent = product.description;
 
-  textWrapper.append(itemName, itemPrice, sizeWrapper, itemDescription, ctaWishlist, guaranteeCondition, shippingCondition, itemDescriptionMobile);
+  textWrapper.append(
+    itemName,
+    itemPrice,
+    sizeWrapper,
+    itemDescription,
+    ctaWishlist,
+    guaranteeCondition,
+    shippingCondition,
+    itemDescriptionMobile,
+  );
 
   itemContainer.append(imageWrapper, textWrapper);
 
@@ -94,11 +103,13 @@ function generateSingleProductHTML(product) {
 }
 
 function displaySingleProduct(products) {
-  const singleProductContainer = document.querySelector(".single-product-container");
-  products.forEach(product => {
+  const singleProductContainer = document.querySelector(
+    ".single-product-container",
+  );
+  products.forEach((product) => {
     const singleProductHTML = generateSingleProductHTML(product);
     singleProductContainer.appendChild(singleProductHTML);
-  })
+  });
 }
 
 // This function is called whenever the page is loaded
