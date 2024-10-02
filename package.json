@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/H-chai/JS1-CA/issues"
   },
-  "homepage": "https://github.com/H-chai/JS1-CA#readme"
+  "homepage": "https://github.com/H-chai/JS1-CA#readme",
+  "devDependencies": {
+    "husky": "^9.1.6"
+  }
 }
