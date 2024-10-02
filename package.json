@@ -1,0 +1,23 @@
+{
+  "name": "js1-ca-test",
+  "version": "1.0.0",
+  "description": "test dev dependencies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/H-chai/JS1-CA.git"
+  },
+  "keywords": [
+    "dev",
+    "dependency"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/H-chai/JS1-CA/issues"
+  },
+  "homepage": "https://github.com/H-chai/JS1-CA#readme"
+}

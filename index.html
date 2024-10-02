@@ -1,183 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The home page of Rainy Days">
-  <title>Home</title>
-  <link rel="stylesheet" href="css/index.css" type="text/css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&display=swap" rel="stylesheet">
-  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-  <script type="module" src="./scripts/home.mjs"></script>
-</head>
-<body>
-  <div id="loading">
-    <div class="lds-dual-ring"></div>
-  </div>
-  
-  <header>
-    <a href="index.html"><img src="image/RainyDays_Logo.png" alt="logo of rainy days" class="rainydays-logo" title="Jump to Home"></a>
-    <div class="header-menu-wrapper">
-      <nav>
-        <ul class="nav-menu">
-          <li class="nav-menu-list header-nav-menu-list on-page"><a href="index.html">Home</a></li>
-          <li class="nav-menu-list header-nav-menu-list"><a href="product.html">Shop</a></li>
-          <li class="nav-menu-list header-nav-menu-list"><a href="about.html">About</a></li>
-          <li class="nav-menu-list header-nav-menu-list"><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <ul class="nav-menu">
-        <li class="icon-menu-list">
-          <a href="#" class="icon-link" aria-label="Search"><iconify-icon icon="iconamoon:search-bold" style="color: #1a1c1e;" width="16" height="16"></iconify-icon></a>
-        </li>
-        <li class="icon-menu-list">
-          <a href="#" class="icon-link" aria-label="Log in my page"><iconify-icon icon="charm:person" style="color: #1a1c1e;" width="16" height="16"></iconify-icon></a>
-        </li>
-        <li class="icon-menu-list">
-          <a href="#" class="icon-link" aria-label="Wish list"><iconify-icon icon="ph:heart-bold" style="color: #1a1c1e;" width="16" height="16"></iconify-icon></a>
-        </li>
-        <li class="icon-menu-list quantity-container">
-          <a href="checkout.html" class="icon-link" aria-label="Shopping cart"><iconify-icon icon="heroicons-outline:shopping-bag" style="color: #1a1c1e;" width="16" height="16"></iconify-icon></a>
-        </li>
-      </ul>
-    </div>
-    <!-- hamburger menu -->
-    <div class="responsive-menu">
-      <ul>
-        <li>
-          <a href="#" class="header-responsive-icon"><iconify-icon icon="iconamoon:search-light" style="color: #191c1e;" width="28" height="28"></iconify-icon></a>
-        </li>
-        <li class="quantity-container">
-          <a href="checkout.html" class="header-responsive-icon"><iconify-icon icon="heroicons:shopping-bag" style="color: #191c1e;" width="28" height="28"></iconify-icon></a>
-        </li>
-      </ul>
-      <div class="hamburger-menu-icon">
-        <input type="checkbox" id="hamburger-menu">
-        <label for="hamburger-menu" class="open-menu"><iconify-icon icon="radix-icons:hamburger-menu" style="color: #191c1e;" width="28" height="28"></iconify-icon></label>
-        <label for="hamburger-menu" class="close-menu"><iconify-icon icon="radix-icons:cross-1" style="color: #191c1e;" width="28" height="28"></iconify-icon></label>
-        <div class="hamburger-menu-container">
-          <nav>
-            <ul class="nav-menu">
-              <li class="nav-menu-list header-nav-menu-list"><a href="index.html">Home</a></li>
-              <li class="nav-menu-list header-nav-menu-list"><a href="product.html">Shop</a></li>
-              <li class="nav-menu-list header-nav-menu-list"><a href="about.html">About</a></li>
-              <li class="nav-menu-list header-nav-menu-list"><a href="contact.html">Contact</a></li>
-            </ul>
-          </nav>
-          <ul class="login-wishlist">
-            <li>
-              <a href="#">
-                <iconify-icon icon="charm:person" style="color: #1a1c1e;" width="28" height="28"></iconify-icon>
-                <p>My Account</p>
-              </a>
-            </li>
-
-            <li>
-              <a href="#">
-                <iconify-icon icon="ph:heart-bold" style="color: #1a1c1e;" width="28" height="28"></iconify-icon>
-                <p>My Wishlist</p>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    
-  </header>
-
-  <main>
-    <div class="main-visual top-main-visual">
-      <h1>Pushing</h1>
-      <h1>the comfort zone</h1>
-      <p class="subcopy-desktop">Step into possibility with Rainy Days. Our rain jackets empower you to thrive, rain or shine.</p>
-      <p class="subcopy-mobile">Step into possibility with Rainy Days.</p>
-      <p class="subcopy-mobile">Our rain jackets empower you to thrive, rain or shine.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The home page of Rainy Days" />
+    <title>Home</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script type="module" src="./scripts/home.mjs"></script>
+  </head>
+  <body>
+    <div id="loading">
+      <div class="lds-dual-ring"></div>
     </div>
 
-    <section class="shop-mens-womens">
-      <div class="shop-mens shop-image-link">
-        <a href="product.html" class="mens">Men's</a>
-      </div>
-      <div class="shop-womens shop-image-link">
-        <a href="product.html" class="womens">Women's</a>
-      </div>
-    </section>
-
-    <section class="top-product">
-      <h2>Product</h2>
-      <div id="gender-filter"></div>
-      <div class="featured-product"></div>
-      <a href="product.html" class="cta-link-product">
-        <button class="cta shop-cta">Shop now</button>
-      </a>
-    </section>
-
-    <section class="about">
-      <img src="image/about.jpg" alt="man enjoying rainy weather outside">
-      <div class="about-us">
-        <h2>About us</h2>
-        <h3>Redefining Comfort,</h3>
-        <h3>Embracing Adventure</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur. Lorem ut sed et et cursus arcu. Viverra ultricies bibendum mus erat eget sed. Mauris maecenas fringilla lobortis consequat nulla sed eget enim. Eget a nullam ornare dictum vestibulum. Nulla convallis morbi in lectus curabitur. Pharetra odio ut dui in. Facilisis sed tortor neque scelerisque fames pulvinar faucibus dui nec.
-        </p>
-        <a href="about.html" class="cta-link-about"><button class="cta read-cta">Read more</button></a>
-      </div>
-    </section>
-
-    <section class="model-grid-container">
-      <div class="model-1"><img src="image/model1.jpg" alt="woman standing with yellow long rain jacket" class="model-item"></div>
-      <div class="model-2"><img src="image/model2.jpg" alt="men wearing rain jackets, hiking in forest" class="model-item"></div>
-      <div class="model-3"><img src="image/model3.jpg" alt="man standing with blue rain jacket and rain pants" class="model-item"></div>
-      <div class="model-4"><img src="image/model4.jpg" alt="woman wearing orange rain jacket" class="model-item"></div>
-    </section>
-
-  </main>
-  
-  <footer>
-    <div class="footer-container">
-      <a href="index.html" class="footer-logo-desktop"><img src="image/footer-logo.png" alt="logo of rainy days" class="rainydays-logo" title="Jump to Home"></a>
-      <div class="footer-links">
+    <header>
+      <a href="index.html"
+        ><img
+          src="image/RainyDays_Logo.png"
+          alt="logo of rainy days"
+          class="rainydays-logo"
+          title="Jump to Home"
+      /></a>
+      <div class="header-menu-wrapper">
         <nav>
-          <ul class="footer-nav-menu">
-            <li class="nav-menu-list footer-nav-menu-list"><a href="index.html">Home</a></li>
-            <li class="nav-menu-list footer-nav-menu-list"><a href="product.html">Shop</a></li>
-            <li class="nav-menu-list footer-nav-menu-list"><a href="about.html">About</a></li>
-            <li class="nav-menu-list footer-nav-menu-list"><a href="contact.html">Contact</a></li>
+          <ul class="nav-menu">
+            <li class="nav-menu-list header-nav-menu-list on-page">
+              <a href="index.html">Home</a>
+            </li>
+            <li class="nav-menu-list header-nav-menu-list">
+              <a href="product.html">Shop</a>
+            </li>
+            <li class="nav-menu-list header-nav-menu-list">
+              <a href="about.html">About</a>
+            </li>
+            <li class="nav-menu-list header-nav-menu-list">
+              <a href="contact.html">Contact</a>
+            </li>
           </ul>
         </nav>
-        <div class="sns-wrapper">
-          <p>Follow us</p>
-          <ul class="sns-list">
-            <li>
-              <a href="#" class="icon-link" aria-label="Instagram"><iconify-icon icon="mdi:instagram" style="color: white;" width="16" height="16"></iconify-icon></a>
-            </li>
-            <li>
-              <a href="#" class="icon-link" aria-label="Youtube"><iconify-icon icon="mdi:youtube" style="color: white;" width="16" height="16"></iconify-icon></a>
-            </li>
-            <li>
-              <a href="#" class="icon-link" aria-label="Tik Tok"><iconify-icon icon="ic:baseline-tiktok" style="color: white;" width="16" height="16"></iconify-icon></a>
-            </li>
-            <li>
-              <a href="#" class="icon-link" aria-label="Twitter"><iconify-icon icon="mdi:twitter" style="color: white;" width="16" height="16"></iconify-icon></a>
-            </li>
-          </ul>
+        <ul class="nav-menu">
+          <li class="icon-menu-list">
+            <a href="#" class="icon-link" aria-label="Search"
+              ><iconify-icon
+                icon="iconamoon:search-bold"
+                style="color: #1a1c1e"
+                width="16"
+                height="16"
+              ></iconify-icon
+            ></a>
+          </li>
+          <li class="icon-menu-list">
+            <a href="#" class="icon-link" aria-label="Log in my page"
+              ><iconify-icon
+                icon="charm:person"
+                style="color: #1a1c1e"
+                width="16"
+                height="16"
+              ></iconify-icon
+            ></a>
+          </li>
+          <li class="icon-menu-list">
+            <a href="#" class="icon-link" aria-label="Wish list"
+              ><iconify-icon
+                icon="ph:heart-bold"
+                style="color: #1a1c1e"
+                width="16"
+                height="16"
+              ></iconify-icon
+            ></a>
+          </li>
+          <li class="icon-menu-list quantity-container">
+            <a href="checkout.html" class="icon-link" aria-label="Shopping cart"
+              ><iconify-icon
+                icon="heroicons-outline:shopping-bag"
+                style="color: #1a1c1e"
+                width="16"
+                height="16"
+              ></iconify-icon
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <!-- hamburger menu -->
+      <div class="responsive-menu">
+        <ul>
+          <li>
+            <a href="#" class="header-responsive-icon"
+              ><iconify-icon
+                icon="iconamoon:search-light"
+                style="color: #191c1e"
+                width="28"
+                height="28"
+              ></iconify-icon
+            ></a>
+          </li>
+          <li class="quantity-container">
+            <a href="checkout.html" class="header-responsive-icon"
+              ><iconify-icon
+                icon="heroicons:shopping-bag"
+                style="color: #191c1e"
+                width="28"
+                height="28"
+              ></iconify-icon
+            ></a>
+          </li>
+        </ul>
+        <div class="hamburger-menu-icon">
+          <input type="checkbox" id="hamburger-menu" />
+          <label for="hamburger-menu" class="open-menu"
+            ><iconify-icon
+              icon="radix-icons:hamburger-menu"
+              style="color: #191c1e"
+              width="28"
+              height="28"
+            ></iconify-icon
+          ></label>
+          <label for="hamburger-menu" class="close-menu"
+            ><iconify-icon
+              icon="radix-icons:cross-1"
+              style="color: #191c1e"
+              width="28"
+              height="28"
+            ></iconify-icon
+          ></label>
+          <div class="hamburger-menu-container">
+            <nav>
+              <ul class="nav-menu">
+                <li class="nav-menu-list header-nav-menu-list">
+                  <a href="index.html">Home</a>
+                </li>
+                <li class="nav-menu-list header-nav-menu-list">
+                  <a href="product.html">Shop</a>
+                </li>
+                <li class="nav-menu-list header-nav-menu-list">
+                  <a href="about.html">About</a>
+                </li>
+                <li class="nav-menu-list header-nav-menu-list">
+                  <a href="contact.html">Contact</a>
+                </li>
+              </ul>
+            </nav>
+            <ul class="login-wishlist">
+              <li>
+                <a href="#">
+                  <iconify-icon
+                    icon="charm:person"
+                    style="color: #1a1c1e"
+                    width="28"
+                    height="28"
+                  ></iconify-icon>
+                  <p>My Account</p>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <iconify-icon
+                    icon="ph:heart-bold"
+                    style="color: #1a1c1e"
+                    width="28"
+                    height="28"
+                  ></iconify-icon>
+                  <p>My Wishlist</p>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="newsletter-signup">
-        <h4>Newsletter Signup</h4>
-        <p>Sign up for our newsletter to receive exclusive updates, special offers, and the latest trends.</p>
-        <input type="text" placeholder="E-mail" class="email">
-        <button class="signup-button">Sign Up</button>
-      </div>
-    </div>
-    <a href="index.html" class="footer-logo-mobile"><img src="image/footer-logo.png" alt="logo of rainy days" class="rainydays-logo-footer"></a>
-  </footer>
+    </header>
 
-</body>
+    <main>
+      <div class="main-visual top-main-visual">
+        <h1>Pushing</h1>
+        <h1>the comfort zone</h1>
+        <p class="subcopy-desktop">
+          Step into possibility with Rainy Days. Our rain jackets empower you to
+          thrive, rain or shine.
+        </p>
+        <p class="subcopy-mobile">Step into possibility with Rainy Days.</p>
+        <p class="subcopy-mobile">
+          Our rain jackets empower you to thrive, rain or shine.
+        </p>
+      </div>
+
+      <section class="shop-mens-womens">
+        <div class="shop-mens shop-image-link">
+          <a href="product.html" class="mens">Men's</a>
+        </div>
+        <div class="shop-womens shop-image-link">
+          <a href="product.html" class="womens">Women's</a>
+        </div>
+      </section>
+
+      <section class="top-product">
+        <h2>Product</h2>
+        <div id="gender-filter"></div>
+        <div class="featured-product"></div>
+        <a href="product.html" class="cta-link-product">
+          <button class="cta shop-cta">Shop now</button>
+        </a>
+      </section>
+
+      <section class="about">
+        <img src="image/about.jpg" alt="man enjoying rainy weather outside" />
+        <div class="about-us">
+          <h2>About us</h2>
+          <h3>Redefining Comfort,</h3>
+          <h3>Embracing Adventure</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur. Lorem ut sed et et cursus
+            arcu. Viverra ultricies bibendum mus erat eget sed. Mauris maecenas
+            fringilla lobortis consequat nulla sed eget enim. Eget a nullam
+            ornare dictum vestibulum. Nulla convallis morbi in lectus curabitur.
+            Pharetra odio ut dui in. Facilisis sed tortor neque scelerisque
+            fames pulvinar faucibus dui nec.
+          </p>
+          <a href="about.html" class="cta-link-about"
+            ><button class="cta read-cta">Read more</button></a
+          >
+        </div>
+      </section>
+
+      <section class="model-grid-container">
+        <div class="model-1">
+          <img
+            src="image/model1.jpg"
+            alt="woman standing with yellow long rain jacket"
+            class="model-item"
+          />
+        </div>
+        <div class="model-2">
+          <img
+            src="image/model2.jpg"
+            alt="men wearing rain jackets, hiking in forest"
+            class="model-item"
+          />
+        </div>
+        <div class="model-3">
+          <img
+            src="image/model3.jpg"
+            alt="man standing with blue rain jacket and rain pants"
+            class="model-item"
+          />
+        </div>
+        <div class="model-4">
+          <img
+            src="image/model4.jpg"
+            alt="woman wearing orange rain jacket"
+            class="model-item"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <a href="index.html" class="footer-logo-desktop"
+          ><img
+            src="image/footer-logo.png"
+            alt="logo of rainy days"
+            class="rainydays-logo"
+            title="Jump to Home"
+        /></a>
+        <div class="footer-links">
+          <nav>
+            <ul class="footer-nav-menu">
+              <li class="nav-menu-list footer-nav-menu-list">
+                <a href="index.html">Home</a>
+              </li>
+              <li class="nav-menu-list footer-nav-menu-list">
+                <a href="product.html">Shop</a>
+              </li>
+              <li class="nav-menu-list footer-nav-menu-list">
+                <a href="about.html">About</a>
+              </li>
+              <li class="nav-menu-list footer-nav-menu-list">
+                <a href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="sns-wrapper">
+            <p>Follow us</p>
+            <ul class="sns-list">
+              <li>
+                <a href="#" class="icon-link" aria-label="Instagram"
+                  ><iconify-icon
+                    icon="mdi:instagram"
+                    style="color: white"
+                    width="16"
+                    height="16"
+                  ></iconify-icon
+                ></a>
+              </li>
+              <li>
+                <a href="#" class="icon-link" aria-label="Youtube"
+                  ><iconify-icon
+                    icon="mdi:youtube"
+                    style="color: white"
+                    width="16"
+                    height="16"
+                  ></iconify-icon
+                ></a>
+              </li>
+              <li>
+                <a href="#" class="icon-link" aria-label="Tik Tok"
+                  ><iconify-icon
+                    icon="ic:baseline-tiktok"
+                    style="color: white"
+                    width="16"
+                    height="16"
+                  ></iconify-icon
+                ></a>
+              </li>
+              <li>
+                <a href="#" class="icon-link" aria-label="Twitter"
+                  ><iconify-icon
+                    icon="mdi:twitter"
+                    style="color: white"
+                    width="16"
+                    height="16"
+                  ></iconify-icon
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="newsletter-signup">
+          <h4>Newsletter Signup</h4>
+          <p>
+            Sign up for our newsletter to receive exclusive updates, special
+            offers, and the latest trends.
+          </p>
+          <input type="text" placeholder="E-mail" class="email" />
+          <button class="signup-button">Sign Up</button>
+        </div>
+      </div>
+      <a href="index.html" class="footer-logo-mobile"
+        ><img
+          src="image/footer-logo.png"
+          alt="logo of rainy days"
+          class="rainydays-logo-footer"
+      /></a>
+    </footer>
+  </body>
 </html>
